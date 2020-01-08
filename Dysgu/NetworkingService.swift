@@ -49,11 +49,35 @@ class NetworkingService {
                     completion(.failure(NetworkingError.badResponse))
                     return
                 }
+                
+                print (unwrappedResponse.statusCode)
                 switch unwrappedResponse.statusCode {
+                    
                 case 200 ..< 300:
                     print("success")
                 default:
                     print("failure")
+                }
+
+                if let unwrappedError = error {
+                    completion(.failure(unwrappedError))
+                    return
+                }
+                
+                if let unwrappedData = data {
+                    do{
+                        let json = try JSONSerialization.jsonObject(with: unwrappedData, options: [])
+                        
+                        if let user = try? JSONDecoder().decode(User.self, from: unwrappedData) {
+                            completion(.success(user))
+                        } else {
+                            let errorResponse = try JSONDecoder().decode(ErrorResponse.self, from: unwrappedData)
+                            completion(.failure(errorResponse))
+                        }
+                    } catch {
+                        completion(.failure(error))
+                        print(error)
+                    }
                 }
             }
         }
