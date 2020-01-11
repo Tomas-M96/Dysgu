@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TX8-4i-GKX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Challenge View Controller-->
+        <scene sceneID="XuR-XD-ErH">
+            <objects>
+                <viewController title="Challenge View Controller" id="Nd3-ND-fqh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KQU-Mx-pRf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="DqX-pR-1Yy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Challenge" id="ZBB-Tc-sfj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JBj-nX-BFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1603" y="2135"/>
+        </scene>
+        <!--Challenge Navigation Controller-->
+        <scene sceneID="RJI-T9-Wa1">
+            <objects>
+                <navigationController title="Challenge Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="TX8-4i-GKX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Challenge" image="link" catalog="system" id="VrU-Lg-EFS"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WfP-H3-3FB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Nd3-ND-fqh" kind="relationship" relationship="rootViewController" id="KLh-LE-GlM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T3a-SZ-lmK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725" y="2136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="link" catalog="system" width="64" height="58"/>
+    </resources>
+</document>

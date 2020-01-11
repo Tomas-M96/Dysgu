@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
             switch result {
             
                 case .success(let user):
-                    self?.performSegue(withIdentifier: "LoginSuccess", sender: user)
+                    self?.performSegue(withIdentifier: "LoginSuccessTransition", sender: user)
             
                 case .failure(let error):
                     guard let alert = self?.alertService.alert(message: error.localizedDescription) else {return}

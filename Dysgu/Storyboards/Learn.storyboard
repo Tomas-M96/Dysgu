@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QTQ-LX-qkJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Learn View Controller-->
+        <scene sceneID="EVu-fi-wiZ">
+            <objects>
+                <viewController title="Learn View Controller" id="USn-tH-kKg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yDQ-JO-Agl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="r4N-ic-CoR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Learn" id="vAc-h3-AEk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbb-ZY-fl3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2526.0869565217395" y="1374.7767857142856"/>
+        </scene>
+        <!--Learn Navigation Controller-->
+        <scene sceneID="7xO-7V-Ljy">
+            <objects>
+                <navigationController title="Learn Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="QTQ-LX-qkJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Learn" image="book.fill" catalog="system" id="FAO-8t-eoF"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C21-gh-gyq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="USn-tH-kKg" kind="relationship" relationship="rootViewController" id="kZA-dH-a3A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HrB-po-393" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1615.9420289855075" y="1374.7767857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book.fill" catalog="system" width="64" height="50"/>
+    </resources>
+</document>

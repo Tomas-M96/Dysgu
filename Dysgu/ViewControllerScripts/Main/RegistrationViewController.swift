@@ -1,5 +1,5 @@
 //
-//  MainMenuViewController.swift
+//  RegistrationViewController.swift
 //  Dysgu
 //
 //  Created by Tomas Moore on 08/01/2020.
@@ -8,13 +8,9 @@
 
 import UIKit
 
-class MainMenuViewController: UITabBarController {
+class RegistrationViewController: UIViewController {
 
-    var user: User?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print(user)
     }
 }
