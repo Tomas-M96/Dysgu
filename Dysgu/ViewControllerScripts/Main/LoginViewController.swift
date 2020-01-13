@@ -43,10 +43,10 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let mainMenuVC = segue.destination as? MainMenuViewController, let user = sender as? User {
+       // if let mainMenuVC = segue.destination as? MainMenuViewController, let user = sender as? User {
             
-            mainMenuVC.user = user
-        }
+         //   mainMenuVC.user = user
+       // }
     }
     
 }
