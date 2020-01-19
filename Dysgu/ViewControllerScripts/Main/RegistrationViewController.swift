@@ -38,20 +38,17 @@ class RegistrationViewController: UIViewController {
                           "Password": password]
         
         if(password == passwordConf) {
-            networkingService.request(endpoint: "/users", method: "POST", parameters: parameters) { [weak self] (result) in
-                
+            networkingService.request(endpoint: "/users", method: "POST", parameters: parameters) { (result: Result<Response, Error>) in
                 switch result {
-                    
-                case .success:
-                    guard let alert = self?.alertService.alert(message: "Account Created") else {return}
-                    self?.present(alert, animated: true)
-                    
-                case .failure(let error):
-                    guard let alert = self?.alertService.alert(message: error.localizedDescription) else {return}
-                    self?.present(alert, animated: true)
+                    case .success:
+                        print("Account Created")
+                    case .failure(let error):
+                        let alert = self.alertService.alert(message: error.localizedDescription)
+                        self.present(alert, animated: true)
+                    print(error)
                 }
             }
-        } else {
+        }else{
             let alert = self.alertService.alert(message: "Passwords do not match")
             self.present(alert, animated: true)
         }

@@ -10,7 +10,7 @@
         <!--Login Menu-->
         <scene sceneID="18q-CC-0Gq">
             <objects>
-                <viewController title="Login Menu" id="AQZ-l0-IZi" customClass="LoginViewController" customModule="Dysgu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" title="Login Menu" id="AQZ-l0-IZi" customClass="LoginViewController" customModule="Dysgu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iFf-ke-K0K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,7 +54,7 @@
                                 <rect key="frame" x="101" y="316" width="212" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -75,7 +75,7 @@
         <!--Menu Tab Bar Controller-->
         <scene sceneID="EAO-YN-g4k">
             <objects>
-                <tabBarController title="Menu Tab Bar Controller" modalPresentationStyle="fullScreen" id="o6v-6G-va3" sceneMemberID="viewController">
+                <tabBarController title="Menu Tab Bar Controller" modalPresentationStyle="fullScreen" id="o6v-6G-va3" customClass="TabBarController" customModule="Dysgu" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Ab0-pK-lny"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7sT-aJ-6Lq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -101,7 +101,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfo-6P-GUP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="516"/>
+            <point key="canvasLocation" x="472" y="516"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="yAQ-TA-OxA">
@@ -183,7 +183,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHP-WE-0HN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="549" y="516"/>
+            <point key="canvasLocation" x="629" y="516"/>
         </scene>
         <!--Challenge-->
         <scene sceneID="NCt-db-bsQ">
@@ -193,7 +193,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdp-Zu-F3P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="516"/>
+            <point key="canvasLocation" x="809" y="516"/>
         </scene>
         <!--Social-->
         <scene sceneID="mRP-fw-gjx">

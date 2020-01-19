@@ -10,7 +10,7 @@
         <!--Learn View Controller-->
         <scene sceneID="EVu-fi-wiZ">
             <objects>
-                <viewController title="Learn View Controller" id="USn-tH-kKg" sceneMemberID="viewController">
+                <viewController title="Learn View Controller" id="USn-tH-kKg" customClass="LearnViewController" customModule="Dysgu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yDQ-JO-Agl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,6 +18,10 @@
                         <viewLayoutGuide key="safeArea" id="r4N-ic-CoR"/>
                     </view>
                     <navigationItem key="navigationItem" title="Learn" id="vAc-h3-AEk"/>
+                    <connections>
+                        <segue destination="w4s-iH-SbH" kind="show" identifier="profileSegue" id="yFS-fy-EGc"/>
+                        <segue destination="X5K-ES-qRW" kind="show" identifier="settingsSegue" id="NIZ-HC-5rs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbb-ZY-fl3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,6 +46,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HrB-po-393" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1615.9420289855075" y="1374.7767857142856"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Vr8-Sc-Ebb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="w4s-iH-SbH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pr2-iD-lna"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iv6-lJ-Gxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3280" y="1359"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="4rv-74-Eoj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="X5K-ES-qRW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6jS-d0-k9w"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pBp-Jh-WxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3272" y="1124"/>
         </scene>
     </scenes>
     <resources>

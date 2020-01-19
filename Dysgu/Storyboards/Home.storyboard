@@ -7,10 +7,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Profile-->
+        <scene sceneID="z2Z-PW-Pv6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="Da7-9U-gpG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vBN-gs-Jpr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Fb-qo-Zvt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2190" y="771"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="M7a-NQ-ieC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="s89-hn-GQG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XWg-DM-s7v"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0G7-CQ-aE5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2130" y="629"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="3fj-ru-rTh">
             <objects>
-                <viewController title="Home View Controller" id="L0d-Ee-q88" sceneMemberID="viewController">
+                <viewController title="Home View Controller" id="L0d-Ee-q88" customClass="HomeViewController" customModule="Dysgu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zga-Su-3uJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,10 +38,14 @@
                         <viewLayoutGuide key="safeArea" id="3VJ-xh-Sga"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="42p-L3-juB"/>
+                    <connections>
+                        <segue destination="Da7-9U-gpG" kind="show" identifier="profileSegue" id="w1P-Cs-GMW"/>
+                        <segue destination="s89-hn-GQG" kind="show" identifier="settingsSegue" id="KPW-kL-MMG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHn-kl-0Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="771"/>
+            <point key="canvasLocation" x="1606" y="771"/>
         </scene>
         <!--Home Navigation Controller-->
         <scene sceneID="WYn-Yq-ajM">

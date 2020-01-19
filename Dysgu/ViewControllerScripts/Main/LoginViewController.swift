@@ -28,25 +28,29 @@ class LoginViewController: UIViewController {
         let parameters = ["EmailAddress": emailAddress,
                           "Password": password]
         
-        networkingService.request(endpoint: "/users/login", method: "POST", parameters: parameters) { [weak self] (result) in
+        networkingService.request(endpoint: "/users/login", method: "POST", parameters: parameters) { (result: Result<User, Error>) in
             switch result {
-            
-                case .success(let user):
-                    self?.performSegue(withIdentifier: "LoginSuccessTransition", sender: user)
-            
+                case .success(let decodedJSON):
+                    self.performSegue(withIdentifier: "LoginSuccessTransition", sender: decodedJSON)
+                    print(decodedJSON)
+                    self.clearText()
                 case .failure(let error):
-                    guard let alert = self?.alertService.alert(message: error.localizedDescription) else {return}
-                    self?.present(alert, animated: true)
+                    let alert = self.alertService.alert(message: error.localizedDescription)
+                    self.present(alert, animated: true)
+                    self.clearText()
+                print(error)
             }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-       // if let mainMenuVC = segue.destination as? MainMenuViewController, let user = sender as? User {
-            
-         //   mainMenuVC.user = user
-       // }
+    if let tabVC = segue.destination as? TabBarController, let decodedJSON = sender as? User {
+           tabVC.user = decodedJSON
+       }
     }
-    
+
+    func clearText() {
+        emailAddressField.text = ""
+        passwordTextField.text = ""
+    }
 }

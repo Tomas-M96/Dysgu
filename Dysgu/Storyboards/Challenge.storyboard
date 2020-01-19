@@ -10,7 +10,7 @@
         <!--Challenge View Controller-->
         <scene sceneID="XuR-XD-ErH">
             <objects>
-                <viewController title="Challenge View Controller" id="Nd3-ND-fqh" sceneMemberID="viewController">
+                <viewController title="Challenge View Controller" id="Nd3-ND-fqh" customClass="ChallengeViewController" customModule="Dysgu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KQU-Mx-pRf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,6 +18,10 @@
                         <viewLayoutGuide key="safeArea" id="DqX-pR-1Yy"/>
                     </view>
                     <navigationItem key="navigationItem" title="Challenge" id="ZBB-Tc-sfj"/>
+                    <connections>
+                        <segue destination="AWW-Jp-Ajt" kind="show" identifier="settingsSegue" id="JCt-Sl-XEE"/>
+                        <segue destination="z2g-hw-IqR" kind="show" identifier="profileSegue" id="Yxy-JW-wgx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBj-nX-BFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,6 +46,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3a-SZ-lmK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="725" y="2136"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="bzu-N9-3kR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="z2g-hw-IqR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="VMi-KZ-kXX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udX-SE-jmE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2397" y="2206"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="HTq-Mg-ykd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="AWW-Jp-Ajt" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uXP-y5-yC7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q5e-G3-Avn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2337" y="2064"/>
         </scene>
     </scenes>
     <resources>

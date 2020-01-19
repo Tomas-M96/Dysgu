@@ -8,8 +8,11 @@
 
 import Foundation
 
-struct User: Decodable {
+class User: Codable {
     let UserId: String
     let EmailAddress: String
-    //let password: String
+}
+
+struct Response: Decodable {
+    let Response: String
 }
