@@ -133,5 +133,56 @@ class NetworkingService {
         }
         task.resume()
     }
+    
+    func response<T: Decodable>(endpoint: String, method: String, completion: @escaping (Result<[T], Error>) -> Void) {
+        
+       guard let url = URL(string: baseUrl + endpoint) else {
+            completion(.failure(NetworkingError.badUrl))
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = method
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: request) { (data, response, error) in
+            DispatchQueue.main.async{
+                guard let unwrappedResponse = response as? HTTPURLResponse else {
+                    completion(.failure(NetworkingError.badResponse))
+                    return
+                }
+                
+                print (unwrappedResponse.statusCode)
+                switch unwrappedResponse.statusCode {
+                    
+                case 200 ..< 300:
+                    print("success")
+                default:
+                    print("failure")
+                }
+
+                if let unwrappedError = error {
+                    completion(.failure(unwrappedError))
+                    return
+                }
+                
+                if let unwrappedData = data {
+                    do{
+                        if let decodedJSON = try JSONDecoder().decode([T]?.self, from: unwrappedData) {
+                            completion(.success(decodedJSON))
+                        } else {
+                            let errorResponse = try JSONDecoder().decode(ErrorResponse.self, from: unwrappedData)
+                            completion(.failure(errorResponse))
+                        }
+                    } catch {
+                        completion(.failure(error))
+                    }
+                }
+            }
+        }
+        task.resume()
+    }
 }
 

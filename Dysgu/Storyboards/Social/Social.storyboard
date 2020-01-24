@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fNt-oc-17L">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Social View Controller-->
+        <scene sceneID="7ZJ-ln-j1Q">
+            <objects>
+                <viewController title="Social View Controller" id="HrY-PA-ag1" customClass="SocialViewController" customModule="Dysgu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hBs-ji-xW6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkg-Px-F17">
+                                <rect key="frame" x="35" y="349" width="344" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="Groups">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KhW-P1-DF9" kind="show" id="gnB-9h-DT1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCC-U7-GlF">
+                                <rect key="frame" x="35" y="579" width="344" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="Messages">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="STB-fW-xB9" kind="show" id="qye-Dy-xRq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ug-Hf-ild">
+                                <rect key="frame" x="35" y="123" width="344" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="Friends">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bRM-xe-3lT" kind="show" id="iUk-Pn-zId"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="E3s-6K-Dwc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Social" id="u6z-n3-MTR"/>
+                    <connections>
+                        <segue destination="ObX-Lt-qYB" kind="show" identifier="profileSegue" id="Z7B-bF-bcP"/>
+                        <segue destination="VeK-EJ-nBQ" kind="show" identifier="settingsSegue" id="eLY-zh-gtj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKC-Td-boh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602.8985507246377" y="2812.5"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="ktx-1X-y4V">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Friends" id="bRM-xe-3lT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Jf6-5Z-gdY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97k-P6-u3Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2243" y="2714"/>
+        </scene>
+        <!--Messages-->
+        <scene sceneID="WrU-m0-LpP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Messages" id="STB-fW-xB9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gS7-KQ-3XS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ihy-Jm-4Of" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2244" y="2922"/>
+        </scene>
+        <!--Groups-->
+        <scene sceneID="40f-1A-7QC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Groups" id="KhW-P1-DF9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ESy-uF-5Kl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aKM-YS-9Em" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2245" y="2813"/>
+        </scene>
+        <!--Social Navigation Controller-->
+        <scene sceneID="oMo-JJ-owJ">
+            <objects>
+                <navigationController title="Social Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="fNt-oc-17L" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Social" image="person.fill" catalog="system" id="YQc-ET-yrL"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W9p-KJ-7dU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HrY-PA-ag1" kind="relationship" relationship="rootViewController" id="Z1u-8E-oA0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44Q-wu-SDV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725" y="2813"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="JwW-s7-eas">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="ObX-Lt-qYB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BQh-VR-4bD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n8U-2s-m9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354" y="3295"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="0Ji-kI-UWa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="VeK-EJ-nBQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gay-G4-akA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GgZ-ji-qbb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844" y="3295"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>

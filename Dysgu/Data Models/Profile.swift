@@ -12,5 +12,5 @@ struct Profile: Decodable {
     let ProfileID: String
     let UserID: String
     let Username: String
-    let About: String
+    let About: String?
 }
