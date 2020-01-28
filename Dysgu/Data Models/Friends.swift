@@ -16,7 +16,3 @@ struct Friend: Decodable {
     //let Accepted: String
 }
 
-struct Friends: Decodable {
-    var friends: [Friend]
-}
-

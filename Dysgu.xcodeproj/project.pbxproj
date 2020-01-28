@@ -43,6 +43,10 @@
 		B4E695FC23CE4A5100B15D27 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695FB23CE4A5100B15D27 /* SocialViewController.swift */; };
 		B4E695FE23CE50C300B15D27 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E695FD23CE50C300B15D27 /* Settings.storyboard */; };
 		B4E6960023CE51B000B15D27 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695FF23CE51B000B15D27 /* SettingsViewController.swift */; };
+		B4EDD11123DDB40E00FD4EF0 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDD11023DDB40E00FD4EF0 /* MessagesViewController.swift */; };
+		B4EDD11323DDBF8800FD4EF0 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDD11223DDBF8800FD4EF0 /* Messages.swift */; };
+		B4EDD11523DDD0D000FD4EF0 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDD11423DDD0D000FD4EF0 /* MessageViewController.swift */; };
+		B4EDD11723DE02CF00FD4EF0 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDD11623DE02CF00FD4EF0 /* ComposeViewController.swift */; };
 		B4F2E8CE23DA74400011CD5E /* FriendAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F2E8CD23DA74400011CD5E /* FriendAddViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +89,10 @@
 		B4E695FB23CE4A5100B15D27 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		B4E695FD23CE50C300B15D27 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		B4E695FF23CE51B000B15D27 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Dysgu/ViewControllerScripts/Settings/SettingsViewController.swift; sourceTree = SOURCE_ROOT; };
+		B4EDD11023DDB40E00FD4EF0 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		B4EDD11223DDBF8800FD4EF0 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		B4EDD11423DDD0D000FD4EF0 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = Dysgu/ViewControllerScripts/Social/Messages/MessageViewController.swift; sourceTree = SOURCE_ROOT; };
+		B4EDD11623DE02CF00FD4EF0 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = Dysgu/ViewControllerScripts/Social/Messages/ComposeViewController.swift; sourceTree = SOURCE_ROOT; };
 		B4F2E8CD23DA74400011CD5E /* FriendAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,11 +216,9 @@
 		B452593323CA68AF00B9E63C /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				B4EDD10F23DDB3F600FD4EF0 /* Messages */,
+				B4EDD10E23DDB3D800FD4EF0 /* Friends */,
 				B4E695FB23CE4A5100B15D27 /* SocialViewController.swift */,
-				B473073D23D7ACF400B31D0F /* FriendsViewController.swift */,
-				B455470623D9D14700A5C482 /* SearchFriendViewController.swift */,
-				B4F2E8CD23DA74400011CD5E /* FriendAddViewController.swift */,
-				B455470823D9D16600A5C482 /* FriendProfileViewController.swift */,
 			);
 			path = Social;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				B4888C0D23BEA36E002AC424 /* User.swift */,
 				B45220FA23CF9B11006F247D /* Profile.swift */,
 				B43C20A923D50BB600A4FA9D /* Friends.swift */,
+				B4EDD11223DDBF8800FD4EF0 /* Messages.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -262,6 +269,27 @@
 				B4E695FF23CE51B000B15D27 /* SettingsViewController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		B4EDD10E23DDB3D800FD4EF0 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				B473073D23D7ACF400B31D0F /* FriendsViewController.swift */,
+				B455470623D9D14700A5C482 /* SearchFriendViewController.swift */,
+				B4F2E8CD23DA74400011CD5E /* FriendAddViewController.swift */,
+				B455470823D9D16600A5C482 /* FriendProfileViewController.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		B4EDD10F23DDB3F600FD4EF0 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				B4EDD11423DDD0D000FD4EF0 /* MessageViewController.swift */,
+				B4EDD11023DDB40E00FD4EF0 /* MessagesViewController.swift */,
+				B4EDD11623DE02CF00FD4EF0 /* ComposeViewController.swift */,
+			);
+			path = Messages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,15 +372,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4EDD11723DE02CF00FD4EF0 /* ComposeViewController.swift in Sources */,
 				B4888C0C23BE9FE8002AC424 /* LoginViewController.swift in Sources */,
 				B411609C239148EE007D8B42 /* AppDelegate.swift in Sources */,
+				B4EDD11123DDB40E00FD4EF0 /* MessagesViewController.swift in Sources */,
 				B455470723D9D14700A5C482 /* SearchFriendViewController.swift in Sources */,
 				B4E695FC23CE4A5100B15D27 /* SocialViewController.swift in Sources */,
 				B455470923D9D16600A5C482 /* FriendProfileViewController.swift in Sources */,
+				B4EDD11523DDD0D000FD4EF0 /* MessageViewController.swift in Sources */,
 				B43C20AA23D50BB600A4FA9D /* Friends.swift in Sources */,
 				B473073E23D7ACF400B31D0F /* FriendsViewController.swift in Sources */,
 				B45220F923CF9981006F247D /* TabBarController.swift in Sources */,
 				B4F2E8CE23DA74400011CD5E /* FriendAddViewController.swift in Sources */,
+				B4EDD11323DDBF8800FD4EF0 /* Messages.swift in Sources */,
 				B4773E0F23C66D8100EC3026 /* RegistrationViewController.swift in Sources */,
 				B4773E0B23C6627900EC3026 /* AlertService.swift in Sources */,
 				B411609E239148EE007D8B42 /* SceneDelegate.swift in Sources */,
