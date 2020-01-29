@@ -14,10 +14,12 @@ class LearnViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureNavigationBar()
+    }
+    
+    func configureNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(profileSegue))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsSegue))
-        print(defaults.string(forKey: "Username"))
     }
     
     @objc func profileSegue(){

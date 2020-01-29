@@ -12,6 +12,12 @@
 		B41160A3239148EE007D8B42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41160A1239148EE007D8B42 /* Main.storyboard */; };
 		B41160A5239148EF007D8B42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B41160A4239148EF007D8B42 /* Assets.xcassets */; };
 		B41160A8239148EF007D8B42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41160A6239148EF007D8B42 /* LaunchScreen.storyboard */; };
+		B41CF93923E21131005388B4 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CF93823E21131005388B4 /* StackView.swift */; };
+		B41CF93B23E212CC005388B4 /* Lesson.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41CF93A23E212CC005388B4 /* Lesson.storyboard */; };
+		B41CF94123E21509005388B4 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CF94023E21509005388B4 /* QuizViewController.swift */; };
+		B41CF94923E21EC3005388B4 /* LessonSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CF94823E21EC3005388B4 /* LessonSelectViewController.swift */; };
+		B41CF94B23E21F06005388B4 /* LessonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CF94A23E21F06005388B4 /* LessonTableViewController.swift */; };
+		B41CF94D23E21F4B005388B4 /* LessonContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CF94C23E21F4B005388B4 /* LessonContentViewController.swift */; };
 		B43C20AA23D50BB600A4FA9D /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C20A923D50BB600A4FA9D /* Friends.swift */; };
 		B44102F423D8E3830095F910 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B44102F323D8E3830095F910 /* Friends.storyboard */; };
 		B44102F623D8E43E0095F910 /* Groups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B44102F523D8E43E0095F910 /* Groups.storyboard */; };
@@ -28,6 +34,7 @@
 		B455470923D9D16600A5C482 /* FriendProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455470823D9D16600A5C482 /* FriendProfileViewController.swift */; };
 		B461BA6C23D27D06005B3065 /* ChangeUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BA6B23D27D06005B3065 /* ChangeUsernameViewController.swift */; };
 		B461BA6E23D2910D005B3065 /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BA6D23D2910D005B3065 /* ProfileNavigationController.swift */; };
+		B467BF1D23E0E34000C55FCD /* LessonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B467BF1C23E0E34000C55FCD /* LessonButton.swift */; };
 		B473073E23D7ACF400B31D0F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473073D23D7ACF400B31D0F /* FriendsViewController.swift */; };
 		B4754EE723DB05E000F318D9 /* FriendAcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4754EE623DB05E000F318D9 /* FriendAcceptViewController.swift */; };
 		B4773E0B23C6627900EC3026 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4773E0A23C6627900EC3026 /* AlertService.swift */; };
@@ -58,6 +65,12 @@
 		B41160A4239148EF007D8B42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B41160A7239148EF007D8B42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B41160A9239148EF007D8B42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B41CF93823E21131005388B4 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		B41CF93A23E212CC005388B4 /* Lesson.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lesson.storyboard; sourceTree = "<group>"; };
+		B41CF94023E21509005388B4 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		B41CF94823E21EC3005388B4 /* LessonSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonSelectViewController.swift; sourceTree = "<group>"; };
+		B41CF94A23E21F06005388B4 /* LessonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTableViewController.swift; sourceTree = "<group>"; };
+		B41CF94C23E21F4B005388B4 /* LessonContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonContentViewController.swift; sourceTree = "<group>"; };
 		B43C20A923D50BB600A4FA9D /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		B44102F323D8E3830095F910 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
 		B44102F523D8E43E0095F910 /* Groups.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Groups.storyboard; sourceTree = "<group>"; };
@@ -74,6 +87,7 @@
 		B455470823D9D16600A5C482 /* FriendProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileViewController.swift; sourceTree = "<group>"; };
 		B461BA6B23D27D06005B3065 /* ChangeUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChangeUsernameViewController.swift; path = Dysgu/ViewControllerScripts/Profile/ChangeUsernameViewController.swift; sourceTree = SOURCE_ROOT; };
 		B461BA6D23D2910D005B3065 /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
+		B467BF1C23E0E34000C55FCD /* LessonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonButton.swift; sourceTree = "<group>"; };
 		B473073D23D7ACF400B31D0F /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		B4754EE623DB05E000F318D9 /* FriendAcceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAcceptViewController.swift; sourceTree = "<group>"; };
 		B4773E0A23C6627900EC3026 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
@@ -110,7 +124,6 @@
 		B411608F239148EE007D8B42 = {
 			isa = PBXGroup;
 			children = (
-				B4754EE623DB05E000F318D9 /* FriendAcceptViewController.swift */,
 				B411609A239148EE007D8B42 /* Dysgu */,
 				B4116099239148EE007D8B42 /* Products */,
 			);
@@ -127,18 +140,54 @@
 		B411609A239148EE007D8B42 /* Dysgu */ = {
 			isa = PBXGroup;
 			children = (
-				B452593623CA68E600B9E63C /* Data Models */,
-				B452593523CA68CB00B9E63C /* Utilties */,
-				B452592F23CA688600B9E63C /* ViewControllerScripts */,
-				B452592E23CA686B00B9E63C /* Networking */,
-				B452592D23CA685500B9E63C /* Storyboards */,
+				B41CF94523E21554005388B4 /* Model */,
+				B41CF94623E2155F005388B4 /* View */,
+				B41CF94723E21564005388B4 /* Controller */,
 				B411609B239148EE007D8B42 /* AppDelegate.swift */,
 				B411609D239148EE007D8B42 /* SceneDelegate.swift */,
+				B41CF93823E21131005388B4 /* StackView.swift */,
 				B41160A4239148EF007D8B42 /* Assets.xcassets */,
 				B41160A6239148EF007D8B42 /* LaunchScreen.storyboard */,
 				B41160A9239148EF007D8B42 /* Info.plist */,
 			);
 			path = Dysgu;
+			sourceTree = "<group>";
+		};
+		B41CF94423E21543005388B4 /* Lesson */ = {
+			isa = PBXGroup;
+			children = (
+				B41CF94C23E21F4B005388B4 /* LessonContentViewController.swift */,
+				B41CF94A23E21F06005388B4 /* LessonTableViewController.swift */,
+				B41CF94823E21EC3005388B4 /* LessonSelectViewController.swift */,
+				B41CF94023E21509005388B4 /* QuizViewController.swift */,
+			);
+			path = Lesson;
+			sourceTree = "<group>";
+		};
+		B41CF94523E21554005388B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B452593623CA68E600B9E63C /* Data Models */,
+				B452592E23CA686B00B9E63C /* Networking */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B41CF94623E2155F005388B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B452593523CA68CB00B9E63C /* Utilties */,
+				B452592D23CA685500B9E63C /* Storyboards */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B41CF94723E21564005388B4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B452592F23CA688600B9E63C /* ViewControllerScripts */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B44102FA23D8E5340095F910 /* Social */ = {
@@ -155,12 +204,12 @@
 		B452592D23CA685500B9E63C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B467BF1923E0E10F00C55FCD /* Lessons */,
 				B44102FA23D8E5340095F910 /* Social */,
 				B4E695FD23CE50C300B15D27 /* Settings.storyboard */,
 				B44F582623CBCA52007935D2 /* Profile.storyboard */,
 				B41160A1239148EE007D8B42 /* Main.storyboard */,
 				B452592523CA61D400B9E63C /* Home.storyboard */,
-				B452592723CA61E500B9E63C /* Learn.storyboard */,
 				B452592923CA61F300B9E63C /* Challenge.storyboard */,
 			);
 			path = Storyboards;
@@ -200,6 +249,7 @@
 		B452593123CA68A400B9E63C /* Learn */ = {
 			isa = PBXGroup;
 			children = (
+				B41CF94423E21543005388B4 /* Lesson */,
 				B4E695F723CE4A2300B15D27 /* LearnViewController.swift */,
 			);
 			path = Learn;
@@ -263,6 +313,16 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		B467BF1923E0E10F00C55FCD /* Lessons */ = {
+			isa = PBXGroup;
+			children = (
+				B452592723CA61E500B9E63C /* Learn.storyboard */,
+				B41CF93A23E212CC005388B4 /* Lesson.storyboard */,
+				B467BF1C23E0E34000C55FCD /* LessonButton.swift */,
+			);
+			path = Lessons;
+			sourceTree = "<group>";
+		};
 		B4E6960123CE51B300B15D27 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +334,7 @@
 		B4EDD10E23DDB3D800FD4EF0 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				B4754EE623DB05E000F318D9 /* FriendAcceptViewController.swift */,
 				B473073D23D7ACF400B31D0F /* FriendsViewController.swift */,
 				B455470623D9D14700A5C482 /* SearchFriendViewController.swift */,
 				B4F2E8CD23DA74400011CD5E /* FriendAddViewController.swift */,
@@ -355,6 +416,7 @@
 				B44F582723CBCA52007935D2 /* Profile.storyboard in Resources */,
 				B452592623CA61D400B9E63C /* Home.storyboard in Resources */,
 				B41160A5239148EF007D8B42 /* Assets.xcassets in Resources */,
+				B41CF93B23E212CC005388B4 /* Lesson.storyboard in Resources */,
 				B41160A3239148EE007D8B42 /* Main.storyboard in Resources */,
 				B44102F823D8E44B0095F910 /* Messages.storyboard in Resources */,
 				B44102F423D8E3830095F910 /* Friends.storyboard in Resources */,
@@ -373,10 +435,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4EDD11723DE02CF00FD4EF0 /* ComposeViewController.swift in Sources */,
+				B41CF94123E21509005388B4 /* QuizViewController.swift in Sources */,
 				B4888C0C23BE9FE8002AC424 /* LoginViewController.swift in Sources */,
 				B411609C239148EE007D8B42 /* AppDelegate.swift in Sources */,
 				B4EDD11123DDB40E00FD4EF0 /* MessagesViewController.swift in Sources */,
 				B455470723D9D14700A5C482 /* SearchFriendViewController.swift in Sources */,
+				B41CF93923E21131005388B4 /* StackView.swift in Sources */,
 				B4E695FC23CE4A5100B15D27 /* SocialViewController.swift in Sources */,
 				B455470923D9D16600A5C482 /* FriendProfileViewController.swift in Sources */,
 				B4EDD11523DDD0D000FD4EF0 /* MessageViewController.swift in Sources */,
@@ -385,6 +449,9 @@
 				B45220F923CF9981006F247D /* TabBarController.swift in Sources */,
 				B4F2E8CE23DA74400011CD5E /* FriendAddViewController.swift in Sources */,
 				B4EDD11323DDBF8800FD4EF0 /* Messages.swift in Sources */,
+				B41CF94B23E21F06005388B4 /* LessonTableViewController.swift in Sources */,
+				B41CF94D23E21F4B005388B4 /* LessonContentViewController.swift in Sources */,
+				B41CF94923E21EC3005388B4 /* LessonSelectViewController.swift in Sources */,
 				B4773E0F23C66D8100EC3026 /* RegistrationViewController.swift in Sources */,
 				B4773E0B23C6627900EC3026 /* AlertService.swift in Sources */,
 				B411609E239148EE007D8B42 /* SceneDelegate.swift in Sources */,
@@ -399,6 +466,7 @@
 				B4E695F423CE484F00B15D27 /* ProfileViewController.swift in Sources */,
 				B4888C0E23BEA36E002AC424 /* User.swift in Sources */,
 				B4E695FA23CE4A3400B15D27 /* ChallengeViewController.swift in Sources */,
+				B467BF1D23E0E34000C55FCD /* LessonButton.swift in Sources */,
 				B461BA6C23D27D06005B3065 /* ChangeUsernameViewController.swift in Sources */,
 				B4413EAD23BE71F200951812 /* NetworkingService.swift in Sources */,
 			);
