@@ -32,7 +32,6 @@
 		B452592A23CA61F300B9E63C /* Challenge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B452592923CA61F300B9E63C /* Challenge.storyboard */; };
 		B455470723D9D14700A5C482 /* SearchFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455470623D9D14700A5C482 /* SearchFriendViewController.swift */; };
 		B455470923D9D16600A5C482 /* FriendProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455470823D9D16600A5C482 /* FriendProfileViewController.swift */; };
-		B461BA6C23D27D06005B3065 /* ChangeUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BA6B23D27D06005B3065 /* ChangeUsernameViewController.swift */; };
 		B461BA6E23D2910D005B3065 /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BA6D23D2910D005B3065 /* ProfileNavigationController.swift */; };
 		B467BF1D23E0E34000C55FCD /* LessonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B467BF1C23E0E34000C55FCD /* LessonButton.swift */; };
 		B473073E23D7ACF400B31D0F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473073D23D7ACF400B31D0F /* FriendsViewController.swift */; };
@@ -42,18 +41,19 @@
 		B4888C0C23BE9FE8002AC424 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4888C0B23BE9FE8002AC424 /* LoginViewController.swift */; };
 		B4888C0E23BEA36E002AC424 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4888C0D23BEA36E002AC424 /* User.swift */; };
 		B4888C1023BEA8D6002AC424 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4888C0F23BEA8D6002AC424 /* ErrorResponse.swift */; };
+		B4A8502323E227DD00E37828 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502223E227DD00E37828 /* SettingsViewController.swift */; };
+		B4A8502523E2289300E37828 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502423E2289300E37828 /* HomeViewController.swift */; };
+		B4A8502723E228D400E37828 /* ChangeUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502623E228D400E37828 /* ChangeUsernameViewController.swift */; };
+		B4A8502923E2296300E37828 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502823E2296300E37828 /* MessageViewController.swift */; };
+		B4A8502B23E2298400E37828 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502A23E2298400E37828 /* ComposeViewController.swift */; };
 		B4D4B56E23D471C800F7EE1A /* ChangeAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D4B56D23D471C800F7EE1A /* ChangeAboutViewController.swift */; };
 		B4E695F423CE484F00B15D27 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695F323CE484F00B15D27 /* ProfileViewController.swift */; };
-		B4E695F623CE4A0A00B15D27 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695F523CE4A0A00B15D27 /* HomeViewController.swift */; };
 		B4E695F823CE4A2300B15D27 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695F723CE4A2300B15D27 /* LearnViewController.swift */; };
 		B4E695FA23CE4A3400B15D27 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695F923CE4A3400B15D27 /* ChallengeViewController.swift */; };
 		B4E695FC23CE4A5100B15D27 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695FB23CE4A5100B15D27 /* SocialViewController.swift */; };
 		B4E695FE23CE50C300B15D27 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E695FD23CE50C300B15D27 /* Settings.storyboard */; };
-		B4E6960023CE51B000B15D27 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695FF23CE51B000B15D27 /* SettingsViewController.swift */; };
 		B4EDD11123DDB40E00FD4EF0 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDD11023DDB40E00FD4EF0 /* MessagesViewController.swift */; };
 		B4EDD11323DDBF8800FD4EF0 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDD11223DDBF8800FD4EF0 /* Messages.swift */; };
-		B4EDD11523DDD0D000FD4EF0 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDD11423DDD0D000FD4EF0 /* MessageViewController.swift */; };
-		B4EDD11723DE02CF00FD4EF0 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDD11623DE02CF00FD4EF0 /* ComposeViewController.swift */; };
 		B4F2E8CE23DA74400011CD5E /* FriendAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F2E8CD23DA74400011CD5E /* FriendAddViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,7 +85,6 @@
 		B452592923CA61F300B9E63C /* Challenge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Challenge.storyboard; sourceTree = "<group>"; };
 		B455470623D9D14700A5C482 /* SearchFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendViewController.swift; sourceTree = "<group>"; };
 		B455470823D9D16600A5C482 /* FriendProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileViewController.swift; sourceTree = "<group>"; };
-		B461BA6B23D27D06005B3065 /* ChangeUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChangeUsernameViewController.swift; path = Dysgu/ViewControllerScripts/Profile/ChangeUsernameViewController.swift; sourceTree = SOURCE_ROOT; };
 		B461BA6D23D2910D005B3065 /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		B467BF1C23E0E34000C55FCD /* LessonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonButton.swift; sourceTree = "<group>"; };
 		B473073D23D7ACF400B31D0F /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
@@ -95,18 +94,19 @@
 		B4888C0B23BE9FE8002AC424 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B4888C0D23BEA36E002AC424 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B4888C0F23BEA8D6002AC424 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		B4A8502223E227DD00E37828 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../../../../SettingsViewController.swift; sourceTree = "<group>"; };
+		B4A8502423E2289300E37828 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../../HomeViewController.swift; sourceTree = "<group>"; };
+		B4A8502623E228D400E37828 /* ChangeUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChangeUsernameViewController.swift; path = ../../../../ChangeUsernameViewController.swift; sourceTree = "<group>"; };
+		B4A8502823E2296300E37828 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = ../../../../../MessageViewController.swift; sourceTree = "<group>"; };
+		B4A8502A23E2298400E37828 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = ../../../../../ComposeViewController.swift; sourceTree = "<group>"; };
 		B4D4B56D23D471C800F7EE1A /* ChangeAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAboutViewController.swift; sourceTree = "<group>"; };
 		B4E695F323CE484F00B15D27 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B4E695F523CE4A0A00B15D27 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Dysgu/ViewControllerScripts/Home/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		B4E695F723CE4A2300B15D27 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		B4E695F923CE4A3400B15D27 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		B4E695FB23CE4A5100B15D27 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		B4E695FD23CE50C300B15D27 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
-		B4E695FF23CE51B000B15D27 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Dysgu/ViewControllerScripts/Settings/SettingsViewController.swift; sourceTree = SOURCE_ROOT; };
 		B4EDD11023DDB40E00FD4EF0 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		B4EDD11223DDBF8800FD4EF0 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
-		B4EDD11423DDD0D000FD4EF0 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = Dysgu/ViewControllerScripts/Social/Messages/MessageViewController.swift; sourceTree = SOURCE_ROOT; };
-		B4EDD11623DE02CF00FD4EF0 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = Dysgu/ViewControllerScripts/Social/Messages/ComposeViewController.swift; sourceTree = SOURCE_ROOT; };
 		B4F2E8CD23DA74400011CD5E /* FriendAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,7 +241,7 @@
 		B452593023CA68A000B9E63C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B4E695F523CE4A0A00B15D27 /* HomeViewController.swift */,
+				B4A8502423E2289300E37828 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -307,7 +307,7 @@
 			children = (
 				B461BA6D23D2910D005B3065 /* ProfileNavigationController.swift */,
 				B4E695F323CE484F00B15D27 /* ProfileViewController.swift */,
-				B461BA6B23D27D06005B3065 /* ChangeUsernameViewController.swift */,
+				B4A8502623E228D400E37828 /* ChangeUsernameViewController.swift */,
 				B4D4B56D23D471C800F7EE1A /* ChangeAboutViewController.swift */,
 			);
 			path = Profile;
@@ -326,7 +326,7 @@
 		B4E6960123CE51B300B15D27 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				B4E695FF23CE51B000B15D27 /* SettingsViewController.swift */,
+				B4A8502223E227DD00E37828 /* SettingsViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -346,9 +346,9 @@
 		B4EDD10F23DDB3F600FD4EF0 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
-				B4EDD11423DDD0D000FD4EF0 /* MessageViewController.swift */,
+				B4A8502A23E2298400E37828 /* ComposeViewController.swift */,
+				B4A8502823E2296300E37828 /* MessageViewController.swift */,
 				B4EDD11023DDB40E00FD4EF0 /* MessagesViewController.swift */,
-				B4EDD11623DE02CF00FD4EF0 /* ComposeViewController.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -434,16 +434,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4EDD11723DE02CF00FD4EF0 /* ComposeViewController.swift in Sources */,
 				B41CF94123E21509005388B4 /* QuizViewController.swift in Sources */,
 				B4888C0C23BE9FE8002AC424 /* LoginViewController.swift in Sources */,
+				B4A8502523E2289300E37828 /* HomeViewController.swift in Sources */,
 				B411609C239148EE007D8B42 /* AppDelegate.swift in Sources */,
 				B4EDD11123DDB40E00FD4EF0 /* MessagesViewController.swift in Sources */,
+				B4A8502723E228D400E37828 /* ChangeUsernameViewController.swift in Sources */,
 				B455470723D9D14700A5C482 /* SearchFriendViewController.swift in Sources */,
 				B41CF93923E21131005388B4 /* StackView.swift in Sources */,
 				B4E695FC23CE4A5100B15D27 /* SocialViewController.swift in Sources */,
 				B455470923D9D16600A5C482 /* FriendProfileViewController.swift in Sources */,
-				B4EDD11523DDD0D000FD4EF0 /* MessageViewController.swift in Sources */,
 				B43C20AA23D50BB600A4FA9D /* Friends.swift in Sources */,
 				B473073E23D7ACF400B31D0F /* FriendsViewController.swift in Sources */,
 				B45220F923CF9981006F247D /* TabBarController.swift in Sources */,
@@ -454,21 +454,21 @@
 				B41CF94923E21EC3005388B4 /* LessonSelectViewController.swift in Sources */,
 				B4773E0F23C66D8100EC3026 /* RegistrationViewController.swift in Sources */,
 				B4773E0B23C6627900EC3026 /* AlertService.swift in Sources */,
+				B4A8502B23E2298400E37828 /* ComposeViewController.swift in Sources */,
 				B411609E239148EE007D8B42 /* SceneDelegate.swift in Sources */,
+				B4A8502323E227DD00E37828 /* SettingsViewController.swift in Sources */,
 				B4754EE723DB05E000F318D9 /* FriendAcceptViewController.swift in Sources */,
 				B461BA6E23D2910D005B3065 /* ProfileNavigationController.swift in Sources */,
-				B4E695F623CE4A0A00B15D27 /* HomeViewController.swift in Sources */,
 				B4E695F823CE4A2300B15D27 /* LearnViewController.swift in Sources */,
 				B4D4B56E23D471C800F7EE1A /* ChangeAboutViewController.swift in Sources */,
 				B45220FB23CF9B11006F247D /* Profile.swift in Sources */,
 				B4888C1023BEA8D6002AC424 /* ErrorResponse.swift in Sources */,
-				B4E6960023CE51B000B15D27 /* SettingsViewController.swift in Sources */,
 				B4E695F423CE484F00B15D27 /* ProfileViewController.swift in Sources */,
 				B4888C0E23BEA36E002AC424 /* User.swift in Sources */,
 				B4E695FA23CE4A3400B15D27 /* ChallengeViewController.swift in Sources */,
 				B467BF1D23E0E34000C55FCD /* LessonButton.swift in Sources */,
-				B461BA6C23D27D06005B3065 /* ChangeUsernameViewController.swift in Sources */,
 				B4413EAD23BE71F200951812 /* NetworkingService.swift in Sources */,
+				B4A8502923E2296300E37828 /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
