@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User: Codable {
+struct User: Codable {
     let UserId: String
     let EmailAddress: String
 }
@@ -16,3 +16,4 @@ class User: Codable {
 struct Response: Decodable {
     let Response: String
 }
+

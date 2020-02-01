@@ -14,13 +14,28 @@
                     <view key="view" contentMode="scaleToFill" id="yDQ-JO-Agl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zX-J9-2sR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Cfo-nt-18u"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="k6e-j5-UvI"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6zX-J9-2sR" firstAttribute="top" secondItem="r4N-ic-CoR" secondAttribute="top" id="0Sp-aU-IAe"/>
+                            <constraint firstItem="6zX-J9-2sR" firstAttribute="bottom" secondItem="r4N-ic-CoR" secondAttribute="bottom" id="HMV-LP-0x3"/>
+                            <constraint firstItem="6zX-J9-2sR" firstAttribute="leading" secondItem="r4N-ic-CoR" secondAttribute="leading" id="pMk-Xc-i7r"/>
+                            <constraint firstItem="6zX-J9-2sR" firstAttribute="trailing" secondItem="r4N-ic-CoR" secondAttribute="trailing" id="y7G-nE-qMu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="r4N-ic-CoR"/>
                     </view>
                     <navigationItem key="navigationItem" title="Learn" id="vAc-h3-AEk"/>
                     <connections>
+                        <outlet property="scrollView" destination="6zX-J9-2sR" id="e5b-hq-vDd"/>
                         <segue destination="w4s-iH-SbH" kind="show" identifier="profileSegue" id="yFS-fy-EGc"/>
                         <segue destination="X5K-ES-qRW" kind="show" identifier="settingsSegue" id="NIZ-HC-5rs"/>
+                        <segue destination="B7B-Gd-ARY" kind="show" identifier="unitSegue" id="5TP-EL-24O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbb-ZY-fl3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

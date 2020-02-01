@@ -10,21 +10,24 @@ import UIKit
 
 class LessonContentViewController: UIViewController {
 
+    let alertService = AlertService()
+    var content: Content?
+    
+    @IBOutlet weak var welshLabel: UILabel!
+    @IBOutlet weak var phoneticLabel: UILabel!
+    @IBOutlet weak var tipsText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        welshLabel.text = content?.Welsh
+        phoneticLabel.text = content?.Phonetic
+        tipsText.text = content?.Tips
+                
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Quiz", style: .plain, target: self, action: #selector(quizSegue))
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func quizSegue() {}
+    
+    @IBAction func audioPressed(_ sender: Any) {
     }
-    */
-
 }

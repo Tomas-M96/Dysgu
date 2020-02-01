@@ -27,7 +27,6 @@ class SearchFriendViewController: UIViewController {
                 switch result {
                     case .success(let decodedJSON):
                         self.friend = decodedJSON
-                        print(self.friend)
                         self.performSegue(withIdentifier: "SearchSuccessSegue", sender: decodedJSON)
                     case .failure(let error):
                         print(error)
