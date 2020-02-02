@@ -29,10 +29,6 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBAction func sendPressed(_ sender: Any) {
         sendMessage()
-        
-        if let conversationId = conversation?.ConversationID {
-        print("/messages/" + conversationId + "/" + messageId!)
-        }
     }
     
     
@@ -81,23 +77,45 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
     func sendMessage() {
         
         guard let content = sendField.text,
-              let username = defaults.string(forKey: "Username")
+              let username = defaults.string(forKey: "Username"),
+              let myProfileId = defaults.string(forKey: "ProfileId"),
+              let recipientId = conversation?.RecipientID,
+              let profileId = conversation?.ProfileID
               else { return }
         
-        let parameters = ["content": content,
-                          "username": username]
+        let parametersPOST = ["content": content,
+                              "username": username]
+        
+        let parametersPATCH = ["profileId": profileId,
+                               "recipientId": recipientId]
         
         if let conversationId = conversation?.ConversationID {
-            networkingService.request(endpoint: "/messages/" + conversationId + "/" + messageId!, method: "POST", parameters: parameters) { (result: Result<Response, Error>) in
+            networkingService.request(endpoint: "/messages/" + conversationId + "/" + messageId!, method: "POST", parameters: parametersPOST) { (result: Result<Response, Error>) in
                 switch result {
                     case .success(let decodedJSON):
-                        print(decodedJSON)
-                        //self.dismiss(animated: true, completion: nil)
+                        print("a")
                     case .failure(let error):
                         let alert = self.alertService.alert(message: error.localizedDescription)
                         self.present(alert, animated: true)
                         //self.clearText()
                     print(error)
+                }
+            }
+        }
+        
+        if conversation?.RecipientID == myProfileId {
+            if let conversationId = conversation?.ConversationID {
+                networkingService.request(endpoint: "/messages/" + conversationId, method: "PATCH", parameters: parametersPATCH) { (result: Result<Response, Error>) in
+                    switch result {
+                        case .success(let decodedJSON):
+                            print(decodedJSON)
+                            //self.dismiss(animated: true, completion: nil)
+                        case .failure(let error):
+                            let alert = self.alertService.alert(message: error.localizedDescription)
+                            self.present(alert, animated: true)
+                            //self.clearText()
+                        print(error)
+                    }
                 }
             }
         }

@@ -42,6 +42,7 @@
 		B4888C0C23BE9FE8002AC424 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4888C0B23BE9FE8002AC424 /* LoginViewController.swift */; };
 		B4888C0E23BEA36E002AC424 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4888C0D23BEA36E002AC424 /* User.swift */; };
 		B4888C1023BEA8D6002AC424 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4888C0F23BEA8D6002AC424 /* ErrorResponse.swift */; };
+		B4A023E323E63F92001DF731 /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A023E223E63F92001DF731 /* NewMessageViewController.swift */; };
 		B4A8502323E227DD00E37828 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502223E227DD00E37828 /* SettingsViewController.swift */; };
 		B4A8502523E2289300E37828 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502423E2289300E37828 /* HomeViewController.swift */; };
 		B4A8502723E228D400E37828 /* ChangeUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502623E228D400E37828 /* ChangeUsernameViewController.swift */; };
@@ -96,6 +97,7 @@
 		B4888C0B23BE9FE8002AC424 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B4888C0D23BEA36E002AC424 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B4888C0F23BEA8D6002AC424 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		B4A023E223E63F92001DF731 /* NewMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewController.swift; sourceTree = "<group>"; };
 		B4A8502223E227DD00E37828 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../../../../SettingsViewController.swift; sourceTree = "<group>"; };
 		B4A8502423E2289300E37828 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../../HomeViewController.swift; sourceTree = "<group>"; };
 		B4A8502623E228D400E37828 /* ChangeUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChangeUsernameViewController.swift; path = ../../../../ChangeUsernameViewController.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				B4A8502A23E2298400E37828 /* ComposeViewController.swift */,
+				B4A023E223E63F92001DF731 /* NewMessageViewController.swift */,
 				B4A8502823E2296300E37828 /* MessageViewController.swift */,
 				B4EDD11023DDB40E00FD4EF0 /* MessagesViewController.swift */,
 			);
@@ -469,6 +472,7 @@
 				B4F2E8CE23DA74400011CD5E /* FriendAddViewController.swift in Sources */,
 				B4EDD11323DDBF8800FD4EF0 /* Messages.swift in Sources */,
 				B41CF94B23E21F06005388B4 /* LessonTableViewController.swift in Sources */,
+				B4A023E323E63F92001DF731 /* NewMessageViewController.swift in Sources */,
 				B41CF94D23E21F4B005388B4 /* LessonContentViewController.swift in Sources */,
 				B41CF94923E21EC3005388B4 /* LessonSelectViewController.swift in Sources */,
 				B4773E0F23C66D8100EC3026 /* RegistrationViewController.swift in Sources */,

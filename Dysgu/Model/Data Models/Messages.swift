@@ -13,7 +13,8 @@ struct Conversation: Decodable {
     let Username: String
     let Header: String
     let Viewed: String
-    
+    let RecipientID: String
+    let ProfileID: String
 }
 
 struct Messages: Decodable {

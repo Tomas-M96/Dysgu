@@ -16,18 +16,33 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     let networkingService = NetworkingService()
     let defaults = UserDefaults.standard
     
-    var conversations = [Conversation]()
+    var conversationsRecieved = [Conversation]()
+    var conversationsSent = [Conversation]()
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var messagesTable: UITableView!
     
-    func getConversations() {
+    func getRecievedConversations() {
         if let profileId = defaults.string(forKey: "ProfileId") {
             networkingService.response(endpoint: "/messages/" + profileId + "/recieved", method: "GET") { (result: Result<[Conversation], Error>) in
                 switch result {
                 case .success(let decodedJSON):
-                    self.conversations = decodedJSON
-                    print(self.conversations)
+                    self.conversationsRecieved = decodedJSON
+                    print(self.conversationsRecieved)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    func getSentConversations() {
+        if let profileId = defaults.string(forKey: "ProfileId") {
+            networkingService.response(endpoint: "/messages/" + profileId + "/sent", method: "GET") { (result: Result<[Conversation], Error>) in
+                switch result {
+                case .success(let decodedJSON):
+                    self.conversationsSent = decodedJSON
+                    print(self.conversationsSent)
                 case .failure(let error):
                     print(error)
                 }
@@ -37,12 +52,17 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getConversations()
+        getRecievedConversations()
+        getSentConversations()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Compose", style: .plain, target: self, action: #selector(composeMessage))
     }
     
+    @IBAction func segmentChanged(_ sender: Any) {
+        messagesTable.reloadData()
+    }
+    
     @objc func composeMessage() {
-        
+        performSegue(withIdentifier: "composeSegue", sender: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,22 +74,44 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return conversations.count
+        if (segmentControl.selectedSegmentIndex == 1) {
+            return conversationsSent.count
+        }else{
+            return conversationsRecieved.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Conversation", for: indexPath)
-        let conversation = conversations[indexPath.row]
-        cell.textLabel?.text = "From: " + conversation.Username
-        cell.detailTextLabel?.text = "Subject: " + conversation.Header
-        return cell
+        
+        if (segmentControl.selectedSegmentIndex == 1) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Conversation", for: indexPath)
+            let conversation = conversationsSent[indexPath.row]
+            cell.textLabel?.text = "From: " + conversation.Username
+            cell.detailTextLabel?.text = "Subject: " + conversation.Header
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Conversation", for: indexPath)
+            let conversation = conversationsRecieved[indexPath.row]
+            cell.textLabel?.text = "From: " + conversation.Username
+            cell.detailTextLabel?.text = "Subject: " + conversation.Header
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-               if let vc = storyboard?.instantiateViewController(withIdentifier: "Message") as?
-                   MessageViewController{
-                       vc.conversation = conversations[indexPath.row]
-                       navigationController?.pushViewController(vc, animated: true)
+               
+        if (segmentControl.selectedSegmentIndex == 1) {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "Message") as?
+                       MessageViewController{
+                           vc.conversation = conversationsSent[indexPath.row]
+                           navigationController?.pushViewController(vc, animated: true)
+            }
+        }else{
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "Message") as?
+                       MessageViewController{
+                           vc.conversation = conversationsRecieved[indexPath.row]
+                           navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
 }

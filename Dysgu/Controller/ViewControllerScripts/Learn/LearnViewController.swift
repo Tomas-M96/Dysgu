@@ -12,7 +12,7 @@ class LearnViewController: UIViewController {
 
     let alertService = AlertService()
     let networkingService = NetworkingService()
-    let button = LessonButton()
+    //let button = LessonButton()
     let defaults = UserDefaults.standard
     var units = [Unit]()
     var lessonUnitId = 0
@@ -22,13 +22,23 @@ class LearnViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     
+    
     func unitButtons() {
-        for i in 0...units.count-1 {
+        for i in 0...9{
+            let button = LessonButton()
             button.setTitle(units[i].Title, for: .normal)
             let unitId = units[i].UnitID; let unitTag = Int(unitId)
             button.tag = unitTag!
             button.heightAnchor.constraint(equalToConstant: 300).isActive = true
             button.addTarget(self, action: #selector(buttonClicked(sender: )), for: .touchUpInside)
+            stackView.addArrangedSubview(button)
+        }
+    }
+    
+    func ahhh() {
+        for i in 0...10 {
+            let button = LessonButton()
+            button.setTitle("\(i)", for: .normal)
             stackView.addArrangedSubview(button)
         }
     }
@@ -39,7 +49,6 @@ class LearnViewController: UIViewController {
     }
     
     func configureStackView() {
-        
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
         scrollView.addSubview(stackView)
@@ -51,7 +60,7 @@ class LearnViewController: UIViewController {
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:50),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-50),
-            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 50),
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
     }
@@ -81,9 +90,7 @@ class LearnViewController: UIViewController {
             switch result {
                 case .success(let decodedJSON):
                     self.units = decodedJSON
-                    print(self.units)
                     self.unitButtons()
-                print(self.units.count)
                 case .failure(let error):
                     print(error)
             }

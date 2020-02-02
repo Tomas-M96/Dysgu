@@ -158,7 +158,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DyT-dj-Qc9"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tPL-iC-NDh"/>
+                    <navigationItem key="navigationItem" title="Quiz" id="tPL-iC-NDh"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="questionText" destination="mxp-Nk-15J" id="8FQ-2K-gYq"/>
