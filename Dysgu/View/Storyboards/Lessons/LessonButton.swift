@@ -21,7 +21,7 @@ class LessonButton: UIButton {
     
     func setupButton() {
         setTitleColor(.white, for: .normal)
-        backgroundColor = .orange
+        backgroundColor = .systemOrange
         titleLabel?.font = UIFont(name: "AvenirNext-DemiBoldItalic", size: 28)
         layer.cornerRadius = 10
     }

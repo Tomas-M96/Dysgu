@@ -33,12 +33,15 @@
 		B455470723D9D14700A5C482 /* SearchFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455470623D9D14700A5C482 /* SearchFriendViewController.swift */; };
 		B455470923D9D16600A5C482 /* FriendProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455470823D9D16600A5C482 /* FriendProfileViewController.swift */; };
 		B459A6E023E460F9009F9C9C /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459A6DF23E460F9009F9C9C /* Unit.swift */; };
+		B45D49F123E7904300EDC5CE /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D49F023E7904300EDC5CE /* GroupsViewController.swift */; };
+		B45D49F523E79D3800EDC5CE /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D49F423E79D3800EDC5CE /* Group.swift */; };
 		B461BA6E23D2910D005B3065 /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BA6D23D2910D005B3065 /* ProfileNavigationController.swift */; };
 		B467BF1D23E0E34000C55FCD /* LessonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B467BF1C23E0E34000C55FCD /* LessonButton.swift */; };
 		B473073E23D7ACF400B31D0F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473073D23D7ACF400B31D0F /* FriendsViewController.swift */; };
 		B4754EE723DB05E000F318D9 /* FriendAcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4754EE623DB05E000F318D9 /* FriendAcceptViewController.swift */; };
 		B4773E0B23C6627900EC3026 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4773E0A23C6627900EC3026 /* AlertService.swift */; };
 		B4773E0F23C66D8100EC3026 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4773E0E23C66D8100EC3026 /* RegistrationViewController.swift */; };
+		B47EA36623E98370004953B9 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47EA36523E98370004953B9 /* GroupViewController.swift */; };
 		B4888C0C23BE9FE8002AC424 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4888C0B23BE9FE8002AC424 /* LoginViewController.swift */; };
 		B4888C0E23BEA36E002AC424 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4888C0D23BEA36E002AC424 /* User.swift */; };
 		B4888C1023BEA8D6002AC424 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4888C0F23BEA8D6002AC424 /* ErrorResponse.swift */; };
@@ -49,6 +52,8 @@
 		B4A8502923E2296300E37828 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502823E2296300E37828 /* MessageViewController.swift */; };
 		B4A8502B23E2298400E37828 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502A23E2298400E37828 /* ComposeViewController.swift */; };
 		B4D4B56E23D471C800F7EE1A /* ChangeAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D4B56D23D471C800F7EE1A /* ChangeAboutViewController.swift */; };
+		B4D9C58223EAC15B00EEEA88 /* GroupMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9C58123EAC15B00EEEA88 /* GroupMembersViewController.swift */; };
+		B4D9C58423EACD1900EEEA88 /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9C58323EACD1900EEEA88 /* GroupProfileViewController.swift */; };
 		B4E695F423CE484F00B15D27 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695F323CE484F00B15D27 /* ProfileViewController.swift */; };
 		B4E695F823CE4A2300B15D27 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695F723CE4A2300B15D27 /* LearnViewController.swift */; };
 		B4E695FA23CE4A3400B15D27 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695F923CE4A3400B15D27 /* ChallengeViewController.swift */; };
@@ -88,12 +93,15 @@
 		B455470623D9D14700A5C482 /* SearchFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendViewController.swift; sourceTree = "<group>"; };
 		B455470823D9D16600A5C482 /* FriendProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileViewController.swift; sourceTree = "<group>"; };
 		B459A6DF23E460F9009F9C9C /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		B45D49F023E7904300EDC5CE /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		B45D49F423E79D3800EDC5CE /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		B461BA6D23D2910D005B3065 /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		B467BF1C23E0E34000C55FCD /* LessonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonButton.swift; sourceTree = "<group>"; };
 		B473073D23D7ACF400B31D0F /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		B4754EE623DB05E000F318D9 /* FriendAcceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAcceptViewController.swift; sourceTree = "<group>"; };
 		B4773E0A23C6627900EC3026 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		B4773E0E23C66D8100EC3026 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		B47EA36523E98370004953B9 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		B4888C0B23BE9FE8002AC424 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B4888C0D23BEA36E002AC424 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B4888C0F23BEA8D6002AC424 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
@@ -104,6 +112,8 @@
 		B4A8502823E2296300E37828 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = ../../../../../MessageViewController.swift; sourceTree = "<group>"; };
 		B4A8502A23E2298400E37828 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = ../../../../../ComposeViewController.swift; sourceTree = "<group>"; };
 		B4D4B56D23D471C800F7EE1A /* ChangeAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAboutViewController.swift; sourceTree = "<group>"; };
+		B4D9C58123EAC15B00EEEA88 /* GroupMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupMembersViewController.swift; path = Dysgu/Controller/ViewControllerScripts/Social/Groups/GroupMembersViewController.swift; sourceTree = SOURCE_ROOT; };
+		B4D9C58323EACD1900EEEA88 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupProfileViewController.swift; path = Dysgu/Controller/ViewControllerScripts/Social/Groups/GroupProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		B4E695F323CE484F00B15D27 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B4E695F723CE4A2300B15D27 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		B4E695F923CE4A3400B15D27 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +281,7 @@
 		B452593323CA68AF00B9E63C /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				B45D49EF23E7902C00EDC5CE /* Groups */,
 				B4EDD10F23DDB3F600FD4EF0 /* Messages */,
 				B4EDD10E23DDB3D800FD4EF0 /* Friends */,
 				B4E695FB23CE4A5100B15D27 /* SocialViewController.swift */,
@@ -301,12 +312,24 @@
 			children = (
 				B459A6DF23E460F9009F9C9C /* Unit.swift */,
 				B445BFF523E4C5270087D87E /* Quiz.swift */,
-				B4888C0D23BEA36E002AC424 /* User.swift */,
 				B45220FA23CF9B11006F247D /* Profile.swift */,
 				B43C20A923D50BB600A4FA9D /* Friends.swift */,
+				B4888C0D23BEA36E002AC424 /* User.swift */,
 				B4EDD11223DDBF8800FD4EF0 /* Messages.swift */,
+				B45D49F423E79D3800EDC5CE /* Group.swift */,
 			);
 			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		B45D49EF23E7902C00EDC5CE /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				B45D49F023E7904300EDC5CE /* GroupsViewController.swift */,
+				B47EA36523E98370004953B9 /* GroupViewController.swift */,
+				B4D9C58123EAC15B00EEEA88 /* GroupMembersViewController.swift */,
+				B4D9C58323EACD1900EEEA88 /* GroupProfileViewController.swift */,
+			);
+			path = Groups;
 			sourceTree = "<group>";
 		};
 		B45DD9F123CD25C400E046FF /* Profile */ = {
@@ -462,10 +485,13 @@
 				B411609C239148EE007D8B42 /* AppDelegate.swift in Sources */,
 				B4EDD11123DDB40E00FD4EF0 /* MessagesViewController.swift in Sources */,
 				B4A8502723E228D400E37828 /* ChangeUsernameViewController.swift in Sources */,
+				B45D49F523E79D3800EDC5CE /* Group.swift in Sources */,
 				B455470723D9D14700A5C482 /* SearchFriendViewController.swift in Sources */,
 				B4E695FC23CE4A5100B15D27 /* SocialViewController.swift in Sources */,
+				B4D9C58223EAC15B00EEEA88 /* GroupMembersViewController.swift in Sources */,
 				B455470923D9D16600A5C482 /* FriendProfileViewController.swift in Sources */,
 				B445BFF623E4C5270087D87E /* Quiz.swift in Sources */,
+				B4D9C58423EACD1900EEEA88 /* GroupProfileViewController.swift in Sources */,
 				B43C20AA23D50BB600A4FA9D /* Friends.swift in Sources */,
 				B473073E23D7ACF400B31D0F /* FriendsViewController.swift in Sources */,
 				B45220F923CF9981006F247D /* TabBarController.swift in Sources */,
@@ -479,6 +505,7 @@
 				B4773E0B23C6627900EC3026 /* AlertService.swift in Sources */,
 				B4A8502B23E2298400E37828 /* ComposeViewController.swift in Sources */,
 				B459A6E023E460F9009F9C9C /* Unit.swift in Sources */,
+				B47EA36623E98370004953B9 /* GroupViewController.swift in Sources */,
 				B411609E239148EE007D8B42 /* SceneDelegate.swift in Sources */,
 				B4A8502323E227DD00E37828 /* SettingsViewController.swift in Sources */,
 				B4754EE723DB05E000F318D9 /* FriendAcceptViewController.swift in Sources */,
@@ -490,6 +517,7 @@
 				B4E695F423CE484F00B15D27 /* ProfileViewController.swift in Sources */,
 				B4888C0E23BEA36E002AC424 /* User.swift in Sources */,
 				B4E695FA23CE4A3400B15D27 /* ChallengeViewController.swift in Sources */,
+				B45D49F123E7904300EDC5CE /* GroupsViewController.swift in Sources */,
 				B467BF1D23E0E34000C55FCD /* LessonButton.swift in Sources */,
 				B4413EAD23BE71F200951812 /* NetworkingService.swift in Sources */,
 				B4A8502923E2296300E37828 /* MessageViewController.swift in Sources */,

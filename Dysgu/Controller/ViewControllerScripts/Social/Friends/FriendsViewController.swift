@@ -26,7 +26,13 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     @IBAction func segmentChange(_ sender: Any) {
-        friendTable.reloadData()
+        if (segmentControl.selectedSegmentIndex == 1){
+            getFriendRequests()
+            friendTable.reloadData()
+        } else {
+            getFriendslist()
+            friendTable.reloadData()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

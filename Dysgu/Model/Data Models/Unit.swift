@@ -29,5 +29,5 @@ struct Content: Decodable {
     let English: String
     let Phonetic: String
     let Audio: String
-    let Tips: String
+    let Tips: String?
 }

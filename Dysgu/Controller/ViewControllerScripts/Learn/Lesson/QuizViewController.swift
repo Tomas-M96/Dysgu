@@ -33,6 +33,7 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createQuestions()
+        questions.shuffle()
         nextQuestion()
     }
     
@@ -56,8 +57,6 @@ class QuizViewController: UIViewController {
     }
     
     func nextQuestion() {
-        
-        questions.shuffle()
         
         questionText.text = questions[currentQuestion].Welsh
         
