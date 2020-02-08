@@ -45,18 +45,21 @@ class NetworkingService {
         
         let task = session.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async{
+                
                 guard let unwrappedResponse = response as? HTTPURLResponse else {
                     completion(.failure(NetworkingError.badResponse))
                     return
                 }
                 
+                print(unwrappedResponse)
+                
                 print (unwrappedResponse.statusCode)
+                
                 switch unwrappedResponse.statusCode {
-                    
-                case 200 ..< 300:
-                    print("success")
-                default:
-                    print("failure")
+                    case 200 ..< 300:
+                        print("success")
+                    default:
+                        print("failure")
                 }
 
                 if let unwrappedError = error {

@@ -35,6 +35,7 @@
 		B459A6E023E460F9009F9C9C /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459A6DF23E460F9009F9C9C /* Unit.swift */; };
 		B45D49F123E7904300EDC5CE /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D49F023E7904300EDC5CE /* GroupsViewController.swift */; };
 		B45D49F523E79D3800EDC5CE /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D49F423E79D3800EDC5CE /* Group.swift */; };
+		B46196F023EF251D00C13464 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46196EF23EF251D00C13464 /* InitialViewController.swift */; };
 		B461BA6E23D2910D005B3065 /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BA6D23D2910D005B3065 /* ProfileNavigationController.swift */; };
 		B467BF1D23E0E34000C55FCD /* LessonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B467BF1C23E0E34000C55FCD /* LessonButton.swift */; };
 		B473073E23D7ACF400B31D0F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473073D23D7ACF400B31D0F /* FriendsViewController.swift */; };
@@ -104,6 +105,7 @@
 		B459A6DF23E460F9009F9C9C /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		B45D49F023E7904300EDC5CE /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		B45D49F423E79D3800EDC5CE /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		B46196EF23EF251D00C13464 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		B461BA6D23D2910D005B3065 /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		B467BF1C23E0E34000C55FCD /* LessonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonButton.swift; sourceTree = "<group>"; };
 		B473073D23D7ACF400B31D0F /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
@@ -237,13 +239,12 @@
 		B452592D23CA685500B9E63C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B46196EE23EF24F200C13464 /* Home */,
+				B46196ED23EF23E900C13464 /* Settings */,
+				B46196EC23EF238F00C13464 /* Profile */,
 				B4E70D6523EB17C4007430F2 /* Challenge */,
 				B467BF1923E0E10F00C55FCD /* Lessons */,
 				B44102FA23D8E5340095F910 /* Social */,
-				B4E695FD23CE50C300B15D27 /* Settings.storyboard */,
-				B44F582623CBCA52007935D2 /* Profile.storyboard */,
-				B41160A1239148EE007D8B42 /* Main.storyboard */,
-				B452592523CA61D400B9E63C /* Home.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -262,7 +263,6 @@
 			children = (
 				B4E6960123CE51B300B15D27 /* Settings */,
 				B45DD9F123CD25C400E046FF /* Profile */,
-				B452593423CA68B800B9E63C /* Main */,
 				B452593323CA68AF00B9E63C /* Social */,
 				B452593223CA68A900B9E63C /* Challenge */,
 				B452593123CA68A400B9E63C /* Learn */,
@@ -274,7 +274,10 @@
 		B452593023CA68A000B9E63C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B46196EF23EF251D00C13464 /* InitialViewController.swift */,
+				B452593423CA68B800B9E63C /* Login */,
 				B4A8502423E2289300E37828 /* HomeViewController.swift */,
+				B45220F823CF9981006F247D /* TabBarController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -314,14 +317,13 @@
 			path = Social;
 			sourceTree = "<group>";
 		};
-		B452593423CA68B800B9E63C /* Main */ = {
+		B452593423CA68B800B9E63C /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				B4888C0B23BE9FE8002AC424 /* LoginViewController.swift */,
 				B4773E0E23C66D8100EC3026 /* RegistrationViewController.swift */,
-				B45220F823CF9981006F247D /* TabBarController.swift */,
 			);
-			path = Main;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		B452593523CA68CB00B9E63C /* Utilties */ = {
@@ -367,6 +369,31 @@
 				B4D4B56D23D471C800F7EE1A /* ChangeAboutViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		B46196EC23EF238F00C13464 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B44F582623CBCA52007935D2 /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B46196ED23EF23E900C13464 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B4E695FD23CE50C300B15D27 /* Settings.storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B46196EE23EF24F200C13464 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B41160A1239148EE007D8B42 /* Main.storyboard */,
+				B452592523CA61D400B9E63C /* Home.storyboard */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		B467BF1923E0E10F00C55FCD /* Lessons */ = {
@@ -539,6 +566,7 @@
 				B4A023E323E63F92001DF731 /* NewMessageViewController.swift in Sources */,
 				B4ED152B23EDA20A00A65990 /* FriendChallengeTableViewController.swift in Sources */,
 				B41CF94D23E21F4B005388B4 /* LessonContentViewController.swift in Sources */,
+				B46196F023EF251D00C13464 /* InitialViewController.swift in Sources */,
 				B41CF94923E21EC3005388B4 /* LessonSelectViewController.swift in Sources */,
 				B4773E0F23C66D8100EC3026 /* RegistrationViewController.swift in Sources */,
 				B4773E0B23C6627900EC3026 /* AlertService.swift in Sources */,
