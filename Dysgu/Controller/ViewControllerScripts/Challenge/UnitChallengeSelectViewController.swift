@@ -1,18 +1,18 @@
 //
-//  LearnViewController.swift
+//  UnitChallengeSelectViewController.swift
 //  Dysgu
 //
-//  Created by Tomas Moore on 14/01/2020.
+//  Created by Tomas Moore on 07/02/2020.
 //  Copyright © 2020 Tomas Moore. All rights reserved.
 //
 
 import UIKit
 
-class LearnViewController: UIViewController {
+class UnitChallengeSelectViewController: UIViewController {
 
+    
     let alertService = AlertService()
     let networkingService = NetworkingService()
-    //let button = LessonButton()
     let defaults = UserDefaults.standard
     var units = [Unit]()
     var lessonUnitId = 0
@@ -60,21 +60,7 @@ class LearnViewController: UIViewController {
     override func viewDidLoad(){
         super.viewDidLoad()
         getUnitList()
-        configureNavigationBar()
         configureStackView()
-    }
-    
-    func configureNavigationBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(profileSegue))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsSegue))
-    }
-    
-    @objc func profileSegue(){
-        self.performSegue(withIdentifier: "profileSegue", sender: self)
-    }
-        
-    @objc func settingsSegue(){
-        self.performSegue(withIdentifier: "settingsSegue", sender: self)
     }
     
     func getUnitList(){
@@ -91,7 +77,7 @@ class LearnViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "unitSegue" {
-            if let vc = segue.destination as? LessonSelectViewController {
+            if let vc = segue.destination as? LessonChallengeSelectViewController {
                 vc.unit = units[lessonUnitId-1]
             }
         }

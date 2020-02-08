@@ -54,13 +54,22 @@
 		B4D4B56E23D471C800F7EE1A /* ChangeAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D4B56D23D471C800F7EE1A /* ChangeAboutViewController.swift */; };
 		B4D9C58223EAC15B00EEEA88 /* GroupMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9C58123EAC15B00EEEA88 /* GroupMembersViewController.swift */; };
 		B4D9C58423EACD1900EEEA88 /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9C58323EACD1900EEEA88 /* GroupProfileViewController.swift */; };
+		B4D9E1D423EDECED009AA44A /* ChallengeMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9E1D323EDECED009AA44A /* ChallengeMethodViewController.swift */; };
+		B4D9E1D623EDED0B009AA44A /* ChallengeQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9E1D523EDED0B009AA44A /* ChallengeQuizViewController.swift */; };
 		B4E695F423CE484F00B15D27 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695F323CE484F00B15D27 /* ProfileViewController.swift */; };
 		B4E695F823CE4A2300B15D27 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695F723CE4A2300B15D27 /* LearnViewController.swift */; };
 		B4E695FA23CE4A3400B15D27 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695F923CE4A3400B15D27 /* ChallengeViewController.swift */; };
 		B4E695FC23CE4A5100B15D27 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695FB23CE4A5100B15D27 /* SocialViewController.swift */; };
 		B4E695FE23CE50C300B15D27 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E695FD23CE50C300B15D27 /* Settings.storyboard */; };
+		B4ED152323ED8FE800A65990 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ED152223ED8FE800A65990 /* Challenge.swift */; };
+		B4ED152523ED9D8500A65990 /* UnitChallengeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ED152423ED9D8500A65990 /* UnitChallengeSelectViewController.swift */; };
+		B4ED152723ED9DA300A65990 /* LessonChallengeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ED152623ED9DA300A65990 /* LessonChallengeSelectViewController.swift */; };
+		B4ED152B23EDA20A00A65990 /* FriendChallengeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ED152A23EDA20A00A65990 /* FriendChallengeTableViewController.swift */; };
 		B4EDD11123DDB40E00FD4EF0 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDD11023DDB40E00FD4EF0 /* MessagesViewController.swift */; };
 		B4EDD11323DDBF8800FD4EF0 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDD11223DDBF8800FD4EF0 /* Messages.swift */; };
+		B4F031EA23EC662200E9FE8C /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F031E923EC662200E9FE8C /* Quiz.storyboard */; };
+		B4F031EC23EC713900E9FE8C /* ChallengeHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F031EB23EC713900E9FE8C /* ChallengeHistoryViewController.swift */; };
+		B4F031EE23EC721700E9FE8C /* PendingChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F031ED23EC721700E9FE8C /* PendingChallengesViewController.swift */; };
 		B4F2E8CE23DA74400011CD5E /* FriendAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F2E8CD23DA74400011CD5E /* FriendAddViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,13 +123,22 @@
 		B4D4B56D23D471C800F7EE1A /* ChangeAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAboutViewController.swift; sourceTree = "<group>"; };
 		B4D9C58123EAC15B00EEEA88 /* GroupMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupMembersViewController.swift; path = Dysgu/Controller/ViewControllerScripts/Social/Groups/GroupMembersViewController.swift; sourceTree = SOURCE_ROOT; };
 		B4D9C58323EACD1900EEEA88 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupProfileViewController.swift; path = Dysgu/Controller/ViewControllerScripts/Social/Groups/GroupProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		B4D9E1D323EDECED009AA44A /* ChallengeMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMethodViewController.swift; sourceTree = "<group>"; };
+		B4D9E1D523EDED0B009AA44A /* ChallengeQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeQuizViewController.swift; sourceTree = "<group>"; };
 		B4E695F323CE484F00B15D27 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B4E695F723CE4A2300B15D27 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		B4E695F923CE4A3400B15D27 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		B4E695FB23CE4A5100B15D27 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		B4E695FD23CE50C300B15D27 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		B4ED152223ED8FE800A65990 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		B4ED152423ED9D8500A65990 /* UnitChallengeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UnitChallengeSelectViewController.swift; path = Dysgu/Controller/ViewControllerScripts/Challenge/UnitChallengeSelectViewController.swift; sourceTree = SOURCE_ROOT; };
+		B4ED152623ED9DA300A65990 /* LessonChallengeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonChallengeSelectViewController.swift; sourceTree = "<group>"; };
+		B4ED152A23EDA20A00A65990 /* FriendChallengeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendChallengeTableViewController.swift; sourceTree = "<group>"; };
 		B4EDD11023DDB40E00FD4EF0 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		B4EDD11223DDBF8800FD4EF0 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		B4F031E923EC662200E9FE8C /* Quiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quiz.storyboard; sourceTree = "<group>"; };
+		B4F031EB23EC713900E9FE8C /* ChallengeHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChallengeHistoryViewController.swift; path = Dysgu/Controller/ViewControllerScripts/Challenge/ChallengeHistoryViewController.swift; sourceTree = SOURCE_ROOT; };
+		B4F031ED23EC721700E9FE8C /* PendingChallengesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingChallengesViewController.swift; sourceTree = "<group>"; };
 		B4F2E8CD23DA74400011CD5E /* FriendAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,13 +237,13 @@
 		B452592D23CA685500B9E63C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B4E70D6523EB17C4007430F2 /* Challenge */,
 				B467BF1923E0E10F00C55FCD /* Lessons */,
 				B44102FA23D8E5340095F910 /* Social */,
 				B4E695FD23CE50C300B15D27 /* Settings.storyboard */,
 				B44F582623CBCA52007935D2 /* Profile.storyboard */,
 				B41160A1239148EE007D8B42 /* Main.storyboard */,
 				B452592523CA61D400B9E63C /* Home.storyboard */,
-				B452592923CA61F300B9E63C /* Challenge.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -274,6 +292,13 @@
 			isa = PBXGroup;
 			children = (
 				B4E695F923CE4A3400B15D27 /* ChallengeViewController.swift */,
+				B4D9E1D523EDED0B009AA44A /* ChallengeQuizViewController.swift */,
+				B4F031EB23EC713900E9FE8C /* ChallengeHistoryViewController.swift */,
+				B4D9E1D323EDECED009AA44A /* ChallengeMethodViewController.swift */,
+				B4ED152A23EDA20A00A65990 /* FriendChallengeTableViewController.swift */,
+				B4F031ED23EC721700E9FE8C /* PendingChallengesViewController.swift */,
+				B4ED152623ED9DA300A65990 /* LessonChallengeSelectViewController.swift */,
+				B4ED152423ED9D8500A65990 /* UnitChallengeSelectViewController.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -312,6 +337,7 @@
 			children = (
 				B459A6DF23E460F9009F9C9C /* Unit.swift */,
 				B445BFF523E4C5270087D87E /* Quiz.swift */,
+				B4ED152223ED8FE800A65990 /* Challenge.swift */,
 				B45220FA23CF9B11006F247D /* Profile.swift */,
 				B43C20A923D50BB600A4FA9D /* Friends.swift */,
 				B4888C0D23BEA36E002AC424 /* User.swift */,
@@ -373,6 +399,15 @@
 				B4A8502223E227DD00E37828 /* SettingsViewController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		B4E70D6523EB17C4007430F2 /* Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				B452592923CA61F300B9E63C /* Challenge.storyboard */,
+				B4F031E923EC662200E9FE8C /* Quiz.storyboard */,
+			);
+			path = Challenge;
 			sourceTree = "<group>";
 		};
 		B4EDD10E23DDB3D800FD4EF0 /* Friends */ = {
@@ -465,6 +500,7 @@
 				B41160A3239148EE007D8B42 /* Main.storyboard in Resources */,
 				B44102F823D8E44B0095F910 /* Messages.storyboard in Resources */,
 				B44102F423D8E3830095F910 /* Friends.storyboard in Resources */,
+				B4F031EA23EC662200E9FE8C /* Quiz.storyboard in Resources */,
 				B44102F623D8E43E0095F910 /* Groups.storyboard in Resources */,
 				B4E695FE23CE50C300B15D27 /* Settings.storyboard in Resources */,
 				B452592423CA560200B9E63C /* Social.storyboard in Resources */,
@@ -494,21 +530,27 @@
 				B4D9C58423EACD1900EEEA88 /* GroupProfileViewController.swift in Sources */,
 				B43C20AA23D50BB600A4FA9D /* Friends.swift in Sources */,
 				B473073E23D7ACF400B31D0F /* FriendsViewController.swift in Sources */,
+				B4F031EE23EC721700E9FE8C /* PendingChallengesViewController.swift in Sources */,
+				B4D9E1D423EDECED009AA44A /* ChallengeMethodViewController.swift in Sources */,
 				B45220F923CF9981006F247D /* TabBarController.swift in Sources */,
 				B4F2E8CE23DA74400011CD5E /* FriendAddViewController.swift in Sources */,
 				B4EDD11323DDBF8800FD4EF0 /* Messages.swift in Sources */,
 				B41CF94B23E21F06005388B4 /* LessonTableViewController.swift in Sources */,
 				B4A023E323E63F92001DF731 /* NewMessageViewController.swift in Sources */,
+				B4ED152B23EDA20A00A65990 /* FriendChallengeTableViewController.swift in Sources */,
 				B41CF94D23E21F4B005388B4 /* LessonContentViewController.swift in Sources */,
 				B41CF94923E21EC3005388B4 /* LessonSelectViewController.swift in Sources */,
 				B4773E0F23C66D8100EC3026 /* RegistrationViewController.swift in Sources */,
 				B4773E0B23C6627900EC3026 /* AlertService.swift in Sources */,
+				B4ED152523ED9D8500A65990 /* UnitChallengeSelectViewController.swift in Sources */,
 				B4A8502B23E2298400E37828 /* ComposeViewController.swift in Sources */,
 				B459A6E023E460F9009F9C9C /* Unit.swift in Sources */,
 				B47EA36623E98370004953B9 /* GroupViewController.swift in Sources */,
 				B411609E239148EE007D8B42 /* SceneDelegate.swift in Sources */,
 				B4A8502323E227DD00E37828 /* SettingsViewController.swift in Sources */,
 				B4754EE723DB05E000F318D9 /* FriendAcceptViewController.swift in Sources */,
+				B4F031EC23EC713900E9FE8C /* ChallengeHistoryViewController.swift in Sources */,
+				B4D9E1D623EDED0B009AA44A /* ChallengeQuizViewController.swift in Sources */,
 				B461BA6E23D2910D005B3065 /* ProfileNavigationController.swift in Sources */,
 				B4E695F823CE4A2300B15D27 /* LearnViewController.swift in Sources */,
 				B4D4B56E23D471C800F7EE1A /* ChangeAboutViewController.swift in Sources */,
@@ -517,10 +559,12 @@
 				B4E695F423CE484F00B15D27 /* ProfileViewController.swift in Sources */,
 				B4888C0E23BEA36E002AC424 /* User.swift in Sources */,
 				B4E695FA23CE4A3400B15D27 /* ChallengeViewController.swift in Sources */,
+				B4ED152723ED9DA300A65990 /* LessonChallengeSelectViewController.swift in Sources */,
 				B45D49F123E7904300EDC5CE /* GroupsViewController.swift in Sources */,
 				B467BF1D23E0E34000C55FCD /* LessonButton.swift in Sources */,
 				B4413EAD23BE71F200951812 /* NetworkingService.swift in Sources */,
 				B4A8502923E2296300E37828 /* MessageViewController.swift in Sources */,
+				B4ED152323ED8FE800A65990 /* Challenge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,7 @@ class QuizViewController: UIViewController {
     var rightAnswerPlacement:UInt32 = 0
     var score = 0
     
-    @IBOutlet weak var questionText: UILabel!
+    @IBOutlet weak var questionText: UITextView!
     
     func createQuestions() {
         for i in 0...contents.count-1 {

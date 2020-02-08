@@ -8,18 +8,6 @@
 
 import Foundation
 
-/*
-class Question {
-    var English: String
-    var Welsh: String
-    
-    init(english: String, welsh: String) {
-        English = english
-        Welsh = welsh
-    }
-}
-*/
-
 struct Question {
     var English: String
     var Welsh: String

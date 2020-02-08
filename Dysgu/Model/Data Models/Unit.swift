@@ -16,7 +16,7 @@ struct Unit: Decodable {
 }
 
 struct Lesson: Decodable {
-    let LessonID: String
+    var LessonID: String
     let UnitID: String
     let Topic: String
     let Image: String

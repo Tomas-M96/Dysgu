@@ -9,21 +9,29 @@
 import UIKit
 
 class ChallengeViewController: UIViewController {
-
+    
+    let alertService = AlertService()
+    let networkingService = NetworkingService()
     let defaults = UserDefaults.standard
     
-    override func viewDidLoad() {
+    @IBOutlet weak var usernameText: UILabel!
+    
+    
+    override func viewDidLoad(){
         super.viewDidLoad()
-
+        configureNavigationBar()
+        usernameText.text = defaults.string(forKey: "Username")
+    }
+    
+    func configureNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(profileSegue))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsSegue))
-        print(defaults.string(forKey: "Username"))
     }
     
     @objc func profileSegue(){
         self.performSegue(withIdentifier: "profileSegue", sender: self)
     }
-            
+        
     @objc func settingsSegue(){
         self.performSegue(withIdentifier: "settingsSegue", sender: self)
     }
