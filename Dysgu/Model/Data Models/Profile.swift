@@ -13,4 +13,5 @@ struct Profile: Decodable {
     let UserID: String
     let Username: String
     let About: String?
+    let Image: String?
 }

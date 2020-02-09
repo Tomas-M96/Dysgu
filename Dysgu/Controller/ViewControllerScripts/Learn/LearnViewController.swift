@@ -12,17 +12,14 @@ class LearnViewController: UIViewController {
 
     let alertService = AlertService()
     let networkingService = NetworkingService()
-    //let button = LessonButton()
     let defaults = UserDefaults.standard
     var units = [Unit]()
     var lessonUnitId = 0
     
     let stackView = UIStackView()
 
-
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    
+
     func unitButtons() {
         for i in 0...9{
             let button = LessonButton()
