@@ -12,38 +12,52 @@ class FriendProfileViewController: UIViewController {
 
     let networkingService = NetworkingService()
     let alertService = AlertService()
-    
     var friend: Friend?
     var profile: Profile?
     
     @IBOutlet weak var aboutField: UITextView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    func getFriend() {
         if let username = friend?.Username {
             networkingService.response(endpoint: "/profiles/friend/" + username, method: "GET") { (result: Result<Profile, Error>) in
                 switch result {
-                    case .success(let decodedJSON):
-                        self.profile = decodedJSON
-                        print(self.profile)
-                    case .failure(let error):
-                        print(error)
+                case .success(let decodedJSON):
+                    self.profile = decodedJSON
+                    self.profileSetup()
+                case .failure(let error):
+                    print(error)
                 }
             }
         }
-        aboutField.text = profile?.About
     }
     
-    @IBAction func removePressed(_ sender: Any) {
+    func deleteFriend() {
         if let friendshipId = friend?.FriendshipID {
             networkingService.response(endpoint: "/friends/" + friendshipId, method: "DELETE") { (result: Result<Response, Error>) in
                 switch result {
-                    case .success(let decodedJSON):
-                        print(decodedJSON)
-                    case .failure(let error):
-                        print(error)
+                case .success(let decodedJSON):
+                    self.navigationController?.popViewController(animated: true)
+                case .failure(let error):
+                    print(error)
                 }
             }
         }
+    }
+    
+    func profileSetup() {
+        aboutField.text = profile?.About
+        if let unwrappedImage = profile?.Image {
+            profileImage.image = UIImage(named: unwrappedImage)
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        getFriend()
+    }
+    
+    @IBAction func removePressed(_ sender: Any) {
+        deleteFriend()
     }
 }

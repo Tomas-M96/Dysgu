@@ -25,7 +25,9 @@ class ChallengeViewController: UIViewController {
     
     func configureNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(profileSegue))
+        navigationItem.leftBarButtonItem?.image = UIImage(systemName: "person.fill")
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsSegue))
+        navigationItem.rightBarButtonItem?.image = UIImage(systemName: "gear")
     }
     
     @objc func profileSegue(){

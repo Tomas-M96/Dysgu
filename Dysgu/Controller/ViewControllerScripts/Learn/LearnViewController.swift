@@ -27,7 +27,9 @@ class LearnViewController: UIViewController {
             let unitId = units[i].UnitID; let unitTag = Int(unitId)
             button.tag = unitTag!
             button.heightAnchor.constraint(equalToConstant: 300).isActive = true
-            button.addTarget(self, action: #selector(buttonClicked(sender: )), for: .touchUpInside)
+            if unitId == "1" {
+                button.addTarget(self, action: #selector(buttonClicked(sender: )), for: .touchUpInside)
+            }
             stackView.addArrangedSubview(button)
         }
     }
@@ -63,7 +65,9 @@ class LearnViewController: UIViewController {
     
     func configureNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(profileSegue))
+        navigationItem.leftBarButtonItem?.image = UIImage(systemName: "person.fill")
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsSegue))
+        navigationItem.rightBarButtonItem?.image = UIImage(systemName: "gear")
     }
     
     @objc func profileSegue(){

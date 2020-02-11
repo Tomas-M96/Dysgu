@@ -19,10 +19,46 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var friendTable: UITableView!
     
+    func getFriendslist() {
+        if let profileId = defaults.string(forKey: "ProfileId") {
+            networkingService.response(endpoint: "/friends/" + profileId, method: "GET") { (result: Result<[Friend], Error>) in
+                switch result {
+                    case .success(let decodedJSON):
+                        self.friendsList = decodedJSON
+                    case .failure(let error):
+                        print(error)
+                }
+            }
+        }
+    }
+    
+    func getFriendRequests() {
+        if let profileId = defaults.string(forKey: "ProfileId") {
+            networkingService.response(endpoint: "/friends/" + profileId + "/requests", method: "GET") { (result: Result<[Friend], Error>) in
+                switch result {
+                    case .success(let decodedJSON):
+                        self.friendRequest = decodedJSON
+                    case .failure(let error):
+                        print(error)
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
            getFriendslist()
            getFriendRequests()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getFriendslist()
+        getFriendRequests()
+        segmentChange(self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        friendTable.reloadData()
     }
     
     @IBAction func segmentChange(_ sender: Any) {
@@ -35,10 +71,6 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        friendTable.reloadData()
-    }
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -78,32 +110,6 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
                 FriendProfileViewController{
                     vc.friend = friendsList[indexPath.row]
                     navigationController?.pushViewController(vc, animated: true)
-            }
-        }
-    }
-    
-    func getFriendslist() {
-        if let profileId = defaults.string(forKey: "ProfileId") {
-            networkingService.response(endpoint: "/friends/" + profileId, method: "GET") { (result: Result<[Friend], Error>) in
-                switch result {
-                    case .success(let decodedJSON):
-                        self.friendsList = decodedJSON
-                    case .failure(let error):
-                        print(error)
-                }
-            }
-        }
-    }
-    
-    func getFriendRequests() {
-        if let profileId = defaults.string(forKey: "ProfileId") {
-            networkingService.response(endpoint: "/friends/" + profileId + "/requests", method: "GET") { (result: Result<[Friend], Error>) in
-                switch result {
-                    case .success(let decodedJSON):
-                        self.friendRequest = decodedJSON
-                    case .failure(let error):
-                        print(error)
-                }
             }
         }
     }

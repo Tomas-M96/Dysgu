@@ -22,18 +22,35 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var messageTable: UITableView!
     @IBOutlet weak var sendField: UITextField!
     
+    func getMessages() {
+        if let conversationId = conversation?.ConversationID {
+            networkingService.response(endpoint: "/messages/" + conversationId, method: "GET") { (result: Result<[Messages], Error>) in
+                switch result {
+                    case .success(let decodedJSON):
+                        self.messages = decodedJSON
+                        self.messageTable.reloadData()
+                    case .failure(let error):
+                        print(error)
+                }
+            }
+        }
+    }
+    
+    func clearText() {
+        sendField.text = ""
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getMessages()
     }
     
-    @IBAction func sendPressed(_ sender: Any) {
-        sendMessage()
+    override func viewWillAppear(_ animated: Bool) {
+        messageTable.reloadData()
     }
     
-    
-    override func viewDidAppear(_ animated: Bool) {
-        messageTable.reloadData()
+    @IBAction func sendPressed(_ sender: Any) {
+        sendMessage()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -60,19 +77,7 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         return cell
     }
   
-    func getMessages() {
-        if let conversationId = conversation?.ConversationID {
-            networkingService.response(endpoint: "/messages/" + conversationId, method: "GET") { (result: Result<[Messages], Error>) in
-                switch result {
-                    case .success(let decodedJSON):
-                        self.messages = decodedJSON
-                        print(self.messages)
-                    case .failure(let error):
-                        print(error)
-                }
-            }
-        }
-    }
+
     
     func sendMessage() {
         
@@ -119,5 +124,7 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
                 }
             }
         }
+        getMessages()
+        clearText()
     }
 }

@@ -14,10 +14,10 @@ class SocialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(profileSegue))
+        navigationItem.leftBarButtonItem?.image = UIImage(systemName: "person.fill")
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsSegue))
-        print(defaults.string(forKey: "Username"))
+        navigationItem.rightBarButtonItem?.image = UIImage(systemName: "gear")
     }
     
     @objc func profileSegue(){

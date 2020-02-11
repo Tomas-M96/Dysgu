@@ -218,7 +218,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jNp-Oc-JYp"/>
                     </view>
-                    <navigationItem key="navigationItem" id="yAf-TB-Kgm"/>
+                    <navigationItem key="navigationItem" title="Profile" id="yAf-TB-Kgm"/>
                     <connections>
                         <outlet property="aboutTextView" destination="LZS-3X-r8c" id="K1t-Z3-sqk"/>
                         <outlet property="profileImage" destination="QSs-xO-7mN" id="MDW-6x-2cb"/>

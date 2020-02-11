@@ -16,31 +16,35 @@ class FriendAddViewController: UIViewController {
     let alertService = AlertService()
     
     @IBOutlet weak var aboutField: UITextView!
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    func postFriend(_ parameters: [String : Any]) {
+        if let profileId = defaults.string(forKey: "ProfileId") {
+            networkingService.request(endpoint: "/friends/" + profileId, method: "POST", parameters: parameters) { (result: Result<Response, Error>) in
+                switch result {
+                case .success(let decodedJSON):
+                    print(decodedJSON)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         aboutField.text = profile?.About
-        print(profile!.ProfileID)
+        if let unwrappedImage = profile?.Image {
+            profileImage.image = UIImage(named: (unwrappedImage))
+        }
     }
     
     @IBAction func sendRequestPressed(_ sender: Any) {
-        
         var parameters = [String: Any]()
         
         if let friendId = profile?.ProfileID {
             parameters = ["friendId": friendId]
         }
-        
-        print(parameters)
-
-        if let profileId = defaults.string(forKey: "ProfileId") {
-            networkingService.request(endpoint: "/friends/" + profileId, method: "POST", parameters: parameters) { (result: Result<Response, Error>) in
-                switch result {
-                    case .success(let decodedJSON):
-                        print(decodedJSON)
-                    case .failure(let error):
-                        print(error)
-                }
-            }
-        }
+        postFriend(parameters)
     }
 }

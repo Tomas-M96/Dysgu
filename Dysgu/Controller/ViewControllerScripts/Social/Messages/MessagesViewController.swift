@@ -57,6 +57,12 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Compose", style: .plain, target: self, action: #selector(composeMessage))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        getRecievedConversations()
+        getSentConversations()
+        messagesTable.reloadData()
+    }
+    
     @IBAction func segmentChanged(_ sender: Any) {
         messagesTable.reloadData()
     }

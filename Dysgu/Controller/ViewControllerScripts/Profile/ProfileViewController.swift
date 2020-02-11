@@ -94,7 +94,9 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
     
     //function to set up the view with the profile information
     func profileSetup() {
-        profileImage.image = UIImage(named: profile?.Image ?? "person.fill")
+        if let unwrappedImage = profile?.Image {
+            profileImage.image = UIImage(named: unwrappedImage)
+        }
         print(profile?.Image)
         aboutTextView.text = profile?.About
         usernameTextField.text = profile?.Username
