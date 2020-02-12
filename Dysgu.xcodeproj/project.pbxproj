@@ -58,6 +58,7 @@
 		B4888C0E23BEA36E002AC424 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4888C0D23BEA36E002AC424 /* User.swift */; };
 		B4888C1023BEA8D6002AC424 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4888C0F23BEA8D6002AC424 /* ErrorResponse.swift */; };
 		B4A023E323E63F92001DF731 /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A023E223E63F92001DF731 /* NewMessageViewController.swift */; };
+		B4A1D2FC23F337A2001F0150 /* MessageChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A1D2FB23F337A2001F0150 /* MessageChatCell.swift */; };
 		B4A8502323E227DD00E37828 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502223E227DD00E37828 /* SettingsViewController.swift */; };
 		B4A8502523E2289300E37828 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502423E2289300E37828 /* HomeViewController.swift */; };
 		B4A8502923E2296300E37828 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502823E2296300E37828 /* MessageViewController.swift */; };
@@ -139,6 +140,7 @@
 		B4888C0D23BEA36E002AC424 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B4888C0F23BEA8D6002AC424 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		B4A023E223E63F92001DF731 /* NewMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewController.swift; sourceTree = "<group>"; };
+		B4A1D2FB23F337A2001F0150 /* MessageChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageChatCell.swift; sourceTree = "<group>"; };
 		B4A8502223E227DD00E37828 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../../../../SettingsViewController.swift; sourceTree = "<group>"; };
 		B4A8502423E2289300E37828 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../../HomeViewController.swift; sourceTree = "<group>"; };
 		B4A8502823E2296300E37828 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = ../../../../../MessageViewController.swift; sourceTree = "<group>"; };
@@ -488,6 +490,7 @@
 				B4A8502A23E2298400E37828 /* ComposeViewController.swift */,
 				B4A023E223E63F92001DF731 /* NewMessageViewController.swift */,
 				B4A8502823E2296300E37828 /* MessageViewController.swift */,
+				B4A1D2FB23F337A2001F0150 /* MessageChatCell.swift */,
 				B4EDD11023DDB40E00FD4EF0 /* MessagesViewController.swift */,
 			);
 			path = Messages;
@@ -605,6 +608,7 @@
 				B4D9E1D423EDECED009AA44A /* ChallengeMethodViewController.swift in Sources */,
 				B45220F923CF9981006F247D /* TabBarController.swift in Sources */,
 				B4F2E8CE23DA74400011CD5E /* FriendAddViewController.swift in Sources */,
+				B4A1D2FC23F337A2001F0150 /* MessageChatCell.swift in Sources */,
 				B4EDD11323DDBF8800FD4EF0 /* Messages.swift in Sources */,
 				B41CF94B23E21F06005388B4 /* LessonTableViewController.swift in Sources */,
 				B4A023E323E63F92001DF731 /* NewMessageViewController.swift in Sources */,

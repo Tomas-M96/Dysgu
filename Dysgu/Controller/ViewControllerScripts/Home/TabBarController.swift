@@ -28,6 +28,9 @@ class TabBarController: UITabBarController {
                 self.defaults.set(decodedJSON.UserID, forKey: "UserId")
                 self.defaults.set(decodedJSON.ProfileID, forKey: "ProfileId")
                 self.defaults.set(decodedJSON.Username, forKey: "Username")
+                if let profileImage = decodedJSON.Image {
+                    self.defaults.set(decodedJSON.Image, forKey: "Image")
+                }
             case .failure(let error):
                 let alert = self.alertService.alert(message: error.localizedDescription)
                 self.present(alert, animated: true)

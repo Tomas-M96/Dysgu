@@ -107,13 +107,13 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
                
         if (segmentControl.selectedSegmentIndex == 1) {
-            if let vc = storyboard?.instantiateViewController(withIdentifier: "Message") as?
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "messageView") as?
                        MessageViewController{
                            vc.conversation = conversationsSent[indexPath.row]
                            navigationController?.pushViewController(vc, animated: true)
             }
         }else{
-            if let vc = storyboard?.instantiateViewController(withIdentifier: "Message") as?
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "messageView") as?
                        MessageViewController{
                            vc.conversation = conversationsRecieved[indexPath.row]
                            navigationController?.pushViewController(vc, animated: true)
