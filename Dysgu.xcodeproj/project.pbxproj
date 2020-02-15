@@ -17,6 +17,7 @@
 		B41CF94923E21EC3005388B4 /* LessonSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CF94823E21EC3005388B4 /* LessonSelectViewController.swift */; };
 		B41CF94B23E21F06005388B4 /* LessonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CF94A23E21F06005388B4 /* LessonTableViewController.swift */; };
 		B41CF94D23E21F4B005388B4 /* LessonContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CF94C23E21F4B005388B4 /* LessonContentViewController.swift */; };
+		B42B581323F49C8800A29F89 /* BadgeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42B581223F49C8800A29F89 /* BadgeCollectionViewController.swift */; };
 		B43C20AA23D50BB600A4FA9D /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C20A923D50BB600A4FA9D /* Friends.swift */; };
 		B44102F423D8E3830095F910 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B44102F323D8E3830095F910 /* Friends.storyboard */; };
 		B44102F623D8E43E0095F910 /* Groups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B44102F523D8E43E0095F910 /* Groups.storyboard */; };
@@ -37,6 +38,8 @@
 		B45D49F523E79D3800EDC5CE /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D49F423E79D3800EDC5CE /* Group.swift */; };
 		B46196F023EF251D00C13464 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46196EF23EF251D00C13464 /* InitialViewController.swift */; };
 		B461BA6E23D2910D005B3065 /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BA6D23D2910D005B3065 /* ProfileNavigationController.swift */; };
+		B463FFC523F6E21F00748124 /* locked.png in Resources */ = {isa = PBXBuildFile; fileRef = B463FFC423F6E21F00748124 /* locked.png */; };
+		B463FFC723F6F4A400748124 /* BadgeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463FFC623F6F4A400748124 /* BadgeDetailViewController.swift */; };
 		B467BF1D23E0E34000C55FCD /* LessonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B467BF1C23E0E34000C55FCD /* LessonButton.swift */; };
 		B472A9C623EF73660000AC20 /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9BB23EF73640000AC20 /* abc.png */; };
 		B472A9C723EF73660000AC20 /* DysguLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9BC23EF73640000AC20 /* DysguLogo.png */; };
@@ -45,7 +48,6 @@
 		B472A9CA23EF73660000AC20 /* Dragon1.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9BF23EF73650000AC20 /* Dragon1.png */; };
 		B472A9CB23EF73660000AC20 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9C023EF73660000AC20 /* book.png */; };
 		B472A9CC23EF73660000AC20 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9C123EF73660000AC20 /* chat.png */; };
-		B472A9CD23EF73660000AC20 /* Locked Lesson.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9C223EF73660000AC20 /* Locked Lesson.png */; };
 		B472A9CE23EF73660000AC20 /* Pic3.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9C323EF73660000AC20 /* Pic3.png */; };
 		B472A9CF23EF73660000AC20 /* Pic4.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9C423EF73660000AC20 /* Pic4.png */; };
 		B472A9D023EF73660000AC20 /* Pic5.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9C523EF73660000AC20 /* Pic5.png */; };
@@ -63,6 +65,7 @@
 		B4A8502523E2289300E37828 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502423E2289300E37828 /* HomeViewController.swift */; };
 		B4A8502923E2296300E37828 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502823E2296300E37828 /* MessageViewController.swift */; };
 		B4A8502B23E2298400E37828 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8502A23E2298400E37828 /* ComposeViewController.swift */; };
+		B4D00E3123F455EB005E2104 /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D00E3023F455EB005E2104 /* Badges.swift */; };
 		B4D9C58223EAC15B00EEEA88 /* GroupMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9C58123EAC15B00EEEA88 /* GroupMembersViewController.swift */; };
 		B4D9C58423EACD1900EEEA88 /* GroupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9C58323EACD1900EEEA88 /* GroupProfileViewController.swift */; };
 		B4D9E1D423EDECED009AA44A /* ChallengeMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9E1D323EDECED009AA44A /* ChallengeMethodViewController.swift */; };
@@ -99,6 +102,7 @@
 		B41CF94823E21EC3005388B4 /* LessonSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonSelectViewController.swift; sourceTree = "<group>"; };
 		B41CF94A23E21F06005388B4 /* LessonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTableViewController.swift; sourceTree = "<group>"; };
 		B41CF94C23E21F4B005388B4 /* LessonContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonContentViewController.swift; sourceTree = "<group>"; };
+		B42B581223F49C8800A29F89 /* BadgeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCollectionViewController.swift; sourceTree = "<group>"; };
 		B43C20A923D50BB600A4FA9D /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		B44102F323D8E3830095F910 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
 		B44102F523D8E43E0095F910 /* Groups.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Groups.storyboard; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 		B45D49F423E79D3800EDC5CE /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		B46196EF23EF251D00C13464 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		B461BA6D23D2910D005B3065 /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
+		B463FFC423F6E21F00748124 /* locked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locked.png; sourceTree = "<group>"; };
+		B463FFC623F6F4A400748124 /* BadgeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDetailViewController.swift; sourceTree = "<group>"; };
 		B467BF1C23E0E34000C55FCD /* LessonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonButton.swift; sourceTree = "<group>"; };
 		B472A9BB23EF73640000AC20 /* abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc.png; sourceTree = "<group>"; };
 		B472A9BC23EF73640000AC20 /* DysguLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DysguLogo.png; sourceTree = "<group>"; };
@@ -127,7 +133,6 @@
 		B472A9BF23EF73650000AC20 /* Dragon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dragon1.png; sourceTree = "<group>"; };
 		B472A9C023EF73660000AC20 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
 		B472A9C123EF73660000AC20 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
-		B472A9C223EF73660000AC20 /* Locked Lesson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Locked Lesson.png"; sourceTree = "<group>"; };
 		B472A9C323EF73660000AC20 /* Pic3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pic3.png; sourceTree = "<group>"; };
 		B472A9C423EF73660000AC20 /* Pic4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pic4.png; sourceTree = "<group>"; };
 		B472A9C523EF73660000AC20 /* Pic5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pic5.png; sourceTree = "<group>"; };
@@ -145,6 +150,7 @@
 		B4A8502423E2289300E37828 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../../HomeViewController.swift; sourceTree = "<group>"; };
 		B4A8502823E2296300E37828 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = ../../../../../MessageViewController.swift; sourceTree = "<group>"; };
 		B4A8502A23E2298400E37828 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = ../../../../../ComposeViewController.swift; sourceTree = "<group>"; };
+		B4D00E3023F455EB005E2104 /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
 		B4D9C58123EAC15B00EEEA88 /* GroupMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupMembersViewController.swift; path = Dysgu/Controller/ViewControllerScripts/Social/Groups/GroupMembersViewController.swift; sourceTree = SOURCE_ROOT; };
 		B4D9C58323EACD1900EEEA88 /* GroupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupProfileViewController.swift; path = Dysgu/Controller/ViewControllerScripts/Social/Groups/GroupProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		B4D9E1D323EDECED009AA44A /* ChallengeMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMethodViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +253,15 @@
 				B452592F23CA688600B9E63C /* ViewControllerScripts */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B42B581123F49C4900A29F89 /* Badges */ = {
+			isa = PBXGroup;
+			children = (
+				B463FFC623F6F4A400748124 /* BadgeDetailViewController.swift */,
+				B42B581223F49C8800A29F89 /* BadgeCollectionViewController.swift */,
+			);
+			path = Badges;
 			sourceTree = "<group>";
 		};
 		B44102FA23D8E5340095F910 /* Social */ = {
@@ -363,6 +378,7 @@
 			children = (
 				B459A6DF23E460F9009F9C9C /* Unit.swift */,
 				B445BFF523E4C5270087D87E /* Quiz.swift */,
+				B4D00E3023F455EB005E2104 /* Badges.swift */,
 				B4ED152223ED8FE800A65990 /* Challenge.swift */,
 				B45220FA23CF9B11006F247D /* Profile.swift */,
 				B43C20A923D50BB600A4FA9D /* Friends.swift */,
@@ -387,6 +403,7 @@
 		B45DD9F123CD25C400E046FF /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				B42B581123F49C4900A29F89 /* Badges */,
 				B461BA6D23D2910D005B3065 /* ProfileNavigationController.swift */,
 				B4E881D323EF4C7D00D95FF5 /* ProfilePictureCollectionViewController.swift */,
 				B4E881D523EF524B00D95FF5 /* ImageCollectionViewCell.swift */,
@@ -439,8 +456,8 @@
 				B472A9BF23EF73650000AC20 /* Dragon1.png */,
 				B472A9BD23EF73650000AC20 /* Dragon3.png */,
 				B472A9BC23EF73640000AC20 /* DysguLogo.png */,
-				B472A9C223EF73660000AC20 /* Locked Lesson.png */,
 				B472A9BE23EF73650000AC20 /* numbers.png */,
+				B463FFC423F6E21F00748124 /* locked.png */,
 				B472A9C323EF73660000AC20 /* Pic3.png */,
 				B472A9C423EF73660000AC20 /* Pic4.png */,
 				B472A9C523EF73660000AC20 /* Pic5.png */,
@@ -577,7 +594,7 @@
 				B472A9CC23EF73660000AC20 /* chat.png in Resources */,
 				B472A9CA23EF73660000AC20 /* Dragon1.png in Resources */,
 				B452592423CA560200B9E63C /* Social.storyboard in Resources */,
-				B472A9CD23EF73660000AC20 /* Locked Lesson.png in Resources */,
+				B463FFC523F6E21F00748124 /* locked.png in Resources */,
 				B452592A23CA61F300B9E63C /* Challenge.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,6 +606,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B463FFC723F6F4A400748124 /* BadgeDetailViewController.swift in Sources */,
 				B41CF94123E21509005388B4 /* QuizViewController.swift in Sources */,
 				B4888C0C23BE9FE8002AC424 /* LoginViewController.swift in Sources */,
 				B4A8502523E2289300E37828 /* HomeViewController.swift in Sources */,
@@ -601,6 +619,7 @@
 				B4D9C58223EAC15B00EEEA88 /* GroupMembersViewController.swift in Sources */,
 				B455470923D9D16600A5C482 /* FriendProfileViewController.swift in Sources */,
 				B445BFF623E4C5270087D87E /* Quiz.swift in Sources */,
+				B42B581323F49C8800A29F89 /* BadgeCollectionViewController.swift in Sources */,
 				B4D9C58423EACD1900EEEA88 /* GroupProfileViewController.swift in Sources */,
 				B43C20AA23D50BB600A4FA9D /* Friends.swift in Sources */,
 				B473073E23D7ACF400B31D0F /* FriendsViewController.swift in Sources */,
@@ -628,6 +647,7 @@
 				B4F031EC23EC713900E9FE8C /* ChallengeHistoryViewController.swift in Sources */,
 				B4D9E1D623EDED0B009AA44A /* ChallengeQuizViewController.swift in Sources */,
 				B461BA6E23D2910D005B3065 /* ProfileNavigationController.swift in Sources */,
+				B4D00E3123F455EB005E2104 /* Badges.swift in Sources */,
 				B4E695F823CE4A2300B15D27 /* LearnViewController.swift in Sources */,
 				B45220FB23CF9B11006F247D /* Profile.swift in Sources */,
 				B4888C1023BEA8D6002AC424 /* ErrorResponse.swift in Sources */,

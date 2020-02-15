@@ -8,16 +8,18 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UITextViewDelegate {
+class ProfileViewController: UIViewController, UITextViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     
     let alertService = AlertService()
     let networkingService = NetworkingService()
     let defaults = UserDefaults.standard
+    var unlockedBadges = [UnlockedBadge]()
     var profile: Profile?
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var aboutTextView: UITextView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     //Function to configure the navigation bar
     func configureNavBar() {
@@ -92,6 +94,22 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+    func getUnlockedBadges() {
+        if let profileId = defaults.string(forKey: "ProfileId") {
+            networkingService.response(endpoint: "/badges/" + profileId, method: "GET") { (result: Result<[UnlockedBadge], Error>) in
+                switch result {
+                case .success(let decodedJSON):
+                    self.unlockedBadges = decodedJSON
+                    self.collectionView.reloadData()
+                case .failure(let error):
+                    let alert = self.alertService.alert(message: error.localizedDescription)
+                    self.present(alert, animated: true)
+                    print(error)
+                }
+            }
+        }
+    }
+    
     //function to set up the view with the profile information
     func profileSetup() {
         if let unwrappedImage = profile?.Image {
@@ -108,6 +126,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
         aboutTextView.delegate = self
         configureNavBar()
         getProfile()
+        getUnlockedBadges()
     }
     
     //Refreshes the profile data when returning from the children views
@@ -130,6 +149,25 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
     //dismisses the view
     @objc func returnSegue(){
         dismiss(animated: true, completion: nil)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return unlockedBadges.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "badge", for: indexPath) as? ImageCollectionViewCell else {
+            fatalError("Unable to dequeue PersonCell.")
+        }
+        cell.imageView.image = UIImage(named: "locked.png")//unlockedBadges[indexPath.row].Image)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "badgeView") as? BadgeCollectionViewController{
+                       vc.unlockedBadges = unlockedBadges
+                       navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 

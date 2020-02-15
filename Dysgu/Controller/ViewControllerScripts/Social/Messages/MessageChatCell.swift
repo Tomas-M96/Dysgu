@@ -64,9 +64,6 @@ class MessageChatCell: UITableViewCell {
         
         trailingConstraint = messageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
         trailingConstraint.isActive = true
-        
-        
-        //messageLabel.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
     }
     
 

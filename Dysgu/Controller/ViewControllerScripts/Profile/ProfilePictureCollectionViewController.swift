@@ -47,6 +47,7 @@ class ProfilePictureCollectionViewController: UICollectionViewController {
             fatalError("Unable to dequeue PersonCell.")
         }
         cell.imageView.image = UIImage(named: profilePics[indexPath.item])
+        cell.name.text = profilePics[indexPath.row]
         return cell
     }
     
