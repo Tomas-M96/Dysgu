@@ -115,7 +115,6 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UICollectionV
         if let unwrappedImage = profile?.Image {
             profileImage.image = UIImage(named: unwrappedImage)
         }
-        print(profile?.Image)
         aboutTextView.text = profile?.About
         usernameTextField.text = profile?.Username
     }

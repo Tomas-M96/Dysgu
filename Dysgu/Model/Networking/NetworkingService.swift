@@ -50,9 +50,7 @@ class NetworkingService {
                     completion(.failure(NetworkingError.badResponse))
                     return
                 }
-                
-                print(unwrappedResponse)
-                
+
                 print (unwrappedResponse.statusCode)
                 
                 switch unwrappedResponse.statusCode {

@@ -29,7 +29,7 @@ class TabBarController: UITabBarController {
                 self.defaults.set(decodedJSON.ProfileID, forKey: "ProfileId")
                 self.defaults.set(decodedJSON.Username, forKey: "Username")
                 if let profileImage = decodedJSON.Image {
-                    self.defaults.set(decodedJSON.Image, forKey: "Image")
+                    self.defaults.set(profileImage, forKey: "Image")
                 }
             case .failure(let error):
                 let alert = self.alertService.alert(message: error.localizedDescription)
@@ -42,7 +42,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Checks if the user is still logged in, if they aren't then call the networking service
-        if let profileId = defaults.string(forKey: "ProfileId") {}else{
+        if defaults.string(forKey: "ProfileId") == nil {
             getProfiles()
         }
     }

@@ -20,12 +20,11 @@ class FriendAcceptViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     
     func patchFriend() {
-        print(friend?.FriendshipID)
         
         if let friendshipId = friend?.FriendshipID {
             networkingService.response(endpoint: "/friends/" + friendshipId, method: "PATCH") { (result: Result<Response, Error>) in
                 switch result {
-                case .success(let decodedJSON):
+                case .success(_):
                     self.navigationController?.popViewController(animated: true)
                 case .failure(let error):
                     print(error)
@@ -41,7 +40,6 @@ class FriendAcceptViewController: UIViewController {
                 case .success(let decodedJSON):
                     self.profile = decodedJSON
                     self.profileSetup()
-                    print(self.profile)
                 case .failure(let error):
                     print(error)
                 }

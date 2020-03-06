@@ -22,6 +22,7 @@ class GroupsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New", style: .plain, target: self, action: #selector(newSegue))
         getAllGroups()
         getJoinedGroups()
     }
@@ -30,8 +31,13 @@ class GroupsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         groupTable.reloadData()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        groupTable.reloadData()
+    override func viewWillAppear(_ animated: Bool) {
+        getAllGroups()
+        getJoinedGroups()
+    }
+    
+    @objc func newSegue() {
+        performSegue(withIdentifier: "newSegue", sender: self)
     }
 
     func getAllGroups() {
@@ -47,11 +53,12 @@ class GroupsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
    
     func getJoinedGroups() {
-            if let profileId = defaults.string(forKey: "ProfileId"){        networkingService.response(endpoint: "/groups/" + profileId + "/profile", method: "GET") { (result: Result<[Group], Error>) in
+            if let profileId = defaults.string(forKey: "ProfileId") {
+                networkingService.response(endpoint: "/groups/" + profileId + "/profile", method: "GET") { (result: Result<[Group], Error>) in
                 switch result {
                     case .success(let decodedJSON):
                         self.joinedGroups = decodedJSON
-                    print(decodedJSON)
+                        self.groupTable.reloadData()
                     case .failure(let error):
                         print(error)
                 }
@@ -77,10 +84,10 @@ class GroupsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         if (segmentControl.selectedSegmentIndex == 1){
             let group = allGroups[indexPath.row]
-            cell.textLabel?.text = group.GroupName
+            cell.textLabel?.text = group.Name
         }else{
             let group = joinedGroups[indexPath.row]
-            cell.textLabel?.text = group.GroupName
+            cell.textLabel?.text = group.Name
         }
         
         return cell

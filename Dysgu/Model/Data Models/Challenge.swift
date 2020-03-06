@@ -10,7 +10,7 @@ import Foundation
 
 struct Challenge: Decodable {
     let ChallengeID: String
-    var LessonID: String
+    let LessonID: String
     let PlayerOne: String
     let PlayerTwo: String
     let Topic: String
@@ -18,7 +18,7 @@ struct Challenge: Decodable {
     let ScoreOne: String?
     let ScoreTwo: String?
     let Winner: String?
-    let Date: String
+    let DateCreated: String
 }
 
 struct LastID: Decodable {

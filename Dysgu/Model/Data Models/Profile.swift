@@ -15,3 +15,10 @@ struct Profile: Decodable {
     let About: String?
     let Image: String?
 }
+
+struct GroupProfile: Decodable {
+    let Username: String
+    let ProfileID: String
+    let GroupID: String
+    let IsAdmin: String
+}

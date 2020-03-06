@@ -36,7 +36,7 @@ class FriendProfileViewController: UIViewController {
         if let friendshipId = friend?.FriendshipID {
             networkingService.response(endpoint: "/friends/" + friendshipId, method: "DELETE") { (result: Result<Response, Error>) in
                 switch result {
-                case .success(let decodedJSON):
+                case .success(_):
                     self.navigationController?.popViewController(animated: true)
                 case .failure(let error):
                     print(error)

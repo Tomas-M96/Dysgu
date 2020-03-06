@@ -19,7 +19,11 @@ struct FeedMessage: Decodable {
 
 struct Group: Decodable {
     let GroupID: String
-    let GroupName: String
+    let Name: String
     let About: String
     let Image: String
+}
+
+struct GroupID: Decodable {
+    let Response: Int
 }

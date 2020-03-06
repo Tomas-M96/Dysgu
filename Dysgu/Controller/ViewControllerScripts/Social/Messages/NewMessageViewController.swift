@@ -34,10 +34,10 @@ class NewMessageViewController: UIViewController {
         
         var recipientId: String?
         
-        if friend?.ProfileIDOne == defaults.string(forKey: "ProfileId") {
-            recipientId = friend?.ProfileIDTwo
+        if friend?.ProfileOne == defaults.string(forKey: "ProfileId") {
+            recipientId = friend?.ProfileTwo
         }else{
-            recipientId = friend?.ProfileIDOne
+            recipientId = friend?.ProfileOne
         }
 
         let username = defaults.string(forKey: "Username")

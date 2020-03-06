@@ -42,7 +42,6 @@ class BadgeDetailViewController: UIViewController {
                 switch result {
                     case .success(let decodedJSON):
                         self.badge = decodedJSON
-                        print(self.badge)
                         self.badgeSetup()
                     case .failure(let error):
                         print(error)

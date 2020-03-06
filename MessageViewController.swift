@@ -44,7 +44,7 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         if let conversationId = conversation?.ConversationID {
              networkingService.request(endpoint: "/messages/" + conversationId + "/" + messageId!, method: "POST", parameters: parametersPOST) { (result: Result<Response, Error>) in
                  switch result {
-                     case .success(let decodedJSON):
+                     case .success(_):
                          print("message sent")
                      case .failure(let error):
                          let alert = self.alertService.alert(message: error.localizedDescription)
