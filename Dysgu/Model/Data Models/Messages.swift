@@ -9,17 +9,15 @@
 import Foundation
 
 struct Conversation: Decodable {
-    let ConversationID: String
+    let ConversationID: String?
     let Username: String
     let Header: String
-    let Viewed: String
-    let RecipientID: String
-    let ProfileID: String
+    let Date: String
 }
 
 struct Messages: Decodable {
     let MessageID: String
     let ParentMessageID: String?
     let Content: String
-    let Username: String
+    let ProfileID: String
 }

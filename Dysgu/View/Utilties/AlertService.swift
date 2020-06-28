@@ -13,9 +13,11 @@ class AlertService {
         
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+
+        alert.view.tintColor = UIColor.systemOrange
         
         alert.addAction(action)
-        
+
         return alert
     }
 }

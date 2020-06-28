@@ -33,7 +33,7 @@ class GroupProfileViewController: UIViewController, UICollectionViewDelegate, UI
                 switch result {
                 case .success(let decodedJSON):
                     self.unlockedBadges = decodedJSON
-                    self.collectionView.reloadData()
+                    //self.collectionView.reloadData()
                 case .failure(let error):
                     let alert = self.alertService.alert(message: error.localizedDescription)
                     self.present(alert, animated: true)
@@ -49,7 +49,7 @@ class GroupProfileViewController: UIViewController, UICollectionViewDelegate, UI
                 switch result {
                     case .success(let decodedJSON):
                         self.friendsList = decodedJSON
-                        self.checkFriend()
+                        //self.checkFriend()
                     case .failure(let error):
                         print(error)
                 }
@@ -102,7 +102,7 @@ class GroupProfileViewController: UIViewController, UICollectionViewDelegate, UI
     func checkFriend() {
         if friendsList.count != 0 {
             for i in 0...friendsList.count {
-                if (member?.ProfileID == friendsList[i].ProfileOne) || (member?.ProfileID == friendsList[i].ProfileTwo) {
+                if (member?.ProfileID == friendsList[i].ProfileID) || (member?.ProfileID == friendsList[i].ProfileID) {
                     isFriend = true
                     friend = friendsList[i]
                     actionSetup()
@@ -120,7 +120,7 @@ class GroupProfileViewController: UIViewController, UICollectionViewDelegate, UI
     
     func setupView() {
         aboutText.text = profile?.About
-        profileImage.image = UIImage(named: profile?.Image ?? "default.png")
+        profileImage.image = UIImage(named: profile?.Image ?? "DragonWales.png")
     }
     
     func actionSetup() {

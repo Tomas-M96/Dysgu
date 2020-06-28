@@ -31,7 +31,7 @@ class ChallengeMethodViewController: UIViewController {
     
     func createChallenge(recipient: String) {
         let parameters = ["RecipientID": recipient,
-                          "LessonID": lesson!.LessonID] as [String : Any]
+                          "LessonID": "1"] as [String : Any]
         
         if let profileId = defaults.string(forKey: "ProfileId") {
             networkingService.request(endpoint: "/challenges/" + profileId, method: "POST", parameters: parameters) { (result: Result<LastID, Error>) in
@@ -64,15 +64,10 @@ class ChallengeMethodViewController: UIViewController {
         }
     }
     
-    @IBAction func yourselfPressed(_ sender: Any) {
-        createChallenge(recipient: profiles[0].ProfileID)
-        performSegue(withIdentifier: "quizSegue", sender: self)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "quizSegue" {
             if let vc = segue.destination as? ChallengeQuizViewController {
-                vc.lessonId = lesson!.LessonID
+                vc.lessonId = "1"
                 vc.challengeId = challengeId
                 vc.recipientId = String(profiles[0].ProfileID)
             }

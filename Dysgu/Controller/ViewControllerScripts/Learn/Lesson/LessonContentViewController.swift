@@ -19,15 +19,18 @@ class LessonContentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welshLabel.text = content?.Welsh
-        phoneticLabel.text = content?.Phonetic
-        tipsText.text = content?.Tips
-                
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Quiz", style: .plain, target: self, action: #selector(quizSegue))
+        //welshLabel.text = content?.Welsh
+        //phoneticLabel.text = content?.Phonetic
+        //tipsText.text = content?.Tips
     }
     
-    @objc func quizSegue() {}
-    
     @IBAction func audioPressed(_ sender: Any) {
+        let alert = self.alertService.alert(message: "Playing audio")
+        self.present(alert, animated: true)
+    }
+    
+    @IBAction func tipsPressed(_ sender: Any) {
+        let alert = self.alertService.alert(message: "No tips available for this item")
+        self.present(alert, animated: true)
     }
 }

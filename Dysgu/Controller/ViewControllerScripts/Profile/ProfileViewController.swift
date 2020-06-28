@@ -52,7 +52,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UICollectionV
                     switch result {
                     case .success:
                         let alert = self.alertService.alert(message: "Username updated to: " + (self.usernameTextField.text ?? "N/A"))
-                        self.present(alert, animated: true)
+                        //self.present(alert, animated: true)
                     case .failure(let error):
                         let alert = self.alertService.alert(message: error.localizedDescription)
                         self.present(alert, animated: true)
@@ -77,7 +77,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UICollectionV
                             switch result {
                                 case .success:
                                     let alert = self.alertService.alert(message: "About Me Updated")
-                                    self.present(alert, animated: true)
+                                    //self.present(alert, animated: true)
                                 case .failure(let error):
                                     let alert = self.alertService.alert(message: error.localizedDescription)
                                     self.present(alert, animated: true)
@@ -100,7 +100,6 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UICollectionV
                 switch result {
                 case .success(let decodedJSON):
                     self.unlockedBadges = decodedJSON
-                    self.collectionView.reloadData()
                 case .failure(let error):
                     let alert = self.alertService.alert(message: error.localizedDescription)
                     self.present(alert, animated: true)
@@ -123,6 +122,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UICollectionV
         super.viewDidLoad()
         //Delegates the text view to the view controller
         aboutTextView.delegate = self
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButton))
         configureNavBar()
         getProfile()
         getUnlockedBadges()
@@ -137,6 +137,12 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UICollectionV
     @IBAction func usernameChanged(_ sender: Any) {
         let parameters = ["Username": usernameTextField.text]
         patchUsername(parameters: parameters as! [String : String])
+    }
+    
+    @objc func saveButton()
+    {
+        let alert = self.alertService.alert(message: "Profile Updated")
+        self.present(alert, animated: true)
     }
     
     //Delegated function for text view action

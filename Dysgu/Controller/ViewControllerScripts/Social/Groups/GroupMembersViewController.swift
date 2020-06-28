@@ -19,8 +19,7 @@ class GroupMembersViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var membersTable: UITableView!
     
     func getMembers() {
-        if let groupId = group?.GroupID {
-            networkingService.response(endpoint: "/groups/" + groupId + "/members", method: "GET") { (result: Result<[GroupProfile], Error>) in
+            networkingService.response(endpoint: "/groups/4/members", method: "GET") { (result: Result<[GroupProfile], Error>) in
                 switch result {
                     case .success(let decodedJSON):
                         self.members = decodedJSON
@@ -30,7 +29,6 @@ class GroupMembersViewController: UIViewController, UITableViewDelegate, UITable
                         print(error)
                 }
             }
-        }
     }
     
     override func viewDidLoad() {

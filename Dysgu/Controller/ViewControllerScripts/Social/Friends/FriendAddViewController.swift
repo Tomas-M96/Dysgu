@@ -20,10 +20,12 @@ class FriendAddViewController: UIViewController {
     
     func postFriend(_ parameters: [String : Any]) {
         if let profileId = defaults.string(forKey: "ProfileId") {
-            networkingService.request(endpoint: "/friends/" + profileId, method: "POST", parameters: parameters) { (result: Result<Response, Error>) in
+            networkingService.request(endpoint: "/friends/request/" + profileId, method: "POST", parameters: parameters) { (result: Result<Response, Error>) in
                 switch result {
                 case .success(let decodedJSON):
                     print(decodedJSON)
+                    let alert = self.alertService.alert(message: "Request Sent")
+                    self.present(alert, animated: true)
                 case .failure(let error):
                     print(error)
                 }

@@ -57,9 +57,13 @@ class LessonSelectViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getLessonList()
-        configureStackView()
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Quiz", style: .plain, target: self, action: #selector(quizSegue))
+        //getLessonList()
+        //configureStackView()
     }
+    
+    @objc func quizSegue()
+    {}
     
     func getLessonList(){
         if let unitId = unit?.UnitID{
@@ -75,6 +79,7 @@ class LessonSelectViewController: UIViewController {
         }
     }
     
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "lessonSegue" {
             if let vc = segue.destination as? LessonTableViewController {
@@ -82,4 +87,5 @@ class LessonSelectViewController: UIViewController {
             }
         }
     }
+ */
 }

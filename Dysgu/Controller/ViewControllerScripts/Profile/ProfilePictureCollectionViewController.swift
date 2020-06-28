@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfilePictureCollectionViewController: UICollectionViewController {
+class ProfilePictureCollectionViewController: UIViewController {
 
     let alertService = AlertService()
     let networkingService = NetworkingService()
@@ -35,7 +35,12 @@ class ProfilePictureCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    @IBAction func selectImage(_ sender: Any) {
+        updateProfile(parameters: ["Image": "DragonBlue.png"])
+    }
+    
+    /*
     //Displays the number of cells needed for the profile pictures
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return profilePics.count
@@ -55,5 +60,5 @@ class ProfilePictureCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let parameters = ["Image": profilePics[indexPath.item]]
         updateProfile(parameters: parameters)
-    }
+    }*/
 }

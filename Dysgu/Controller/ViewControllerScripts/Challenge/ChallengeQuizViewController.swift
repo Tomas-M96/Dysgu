@@ -24,6 +24,7 @@ class ChallengeQuizViewController: UIViewController {
     var score = 0
     
    @IBOutlet weak var questionText: UITextView!
+   @IBOutlet weak var scoreText: UILabel!
     
     func createQuestions() {
         for i in 0...contents.count-1 {
@@ -99,21 +100,20 @@ class ChallengeQuizViewController: UIViewController {
     
     @IBAction func answerPressed(_ sender: AnyObject) {
         
-        if (sender.tag == Int(rightAnswerPlacement)) {
+        if (sender.tag == Int(rightAnswerPlacement) && currentQuestion < 6) {
             let alert = self.alertService.alert(message: "Correct")
             self.present(alert, animated: true)
             nextQuestion()
             score += 1
+            scoreText.text = "Score: \(score)"
+        }else if (currentQuestion > 5) {
+            let alert = self.alertService.alert(message: "Your score was \(score)")
+            self.present(alert, animated: true)
+            endChallenge()
         }else{
             let alert = self.alertService.alert(message: "Incorrect")
             self.present(alert, animated: true)
             nextQuestion()
-        }
-        
-        if (currentQuestion > 5) {
-            let alert = self.alertService.alert(message: "Your score was \(score)")
-            self.present(alert, animated: true)
-            endChallenge()
         }
     }
 }

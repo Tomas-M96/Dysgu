@@ -14,11 +14,10 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
     let networkingService = NetworkingService()
     let defaults = UserDefaults.standard
     
-    
-    
     var conversation: Conversation?
     var messages = [Messages]()
     var messageId: String?
+    var recipientId: String?
     
     @IBOutlet weak var messageTable: UITableView!
     @IBOutlet weak var sendField: UITextField!
@@ -50,13 +49,12 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
                          let alert = self.alertService.alert(message: error.localizedDescription)
                          self.present(alert, animated: true)
                          //self.clearText()
-                     print(error)
+                         print(error)
                  }
              }
          }
-         
+    
         //PATCHing the existing conversation to update recipient
-         if conversation?.RecipientID == myProfileId {
              if let conversationId = conversation?.ConversationID {
                  networkingService.request(endpoint: "/messages/" + conversationId, method: "PATCH", parameters: parametersPATCH) { (result: Result<Response, Error>) in
                      switch result {
@@ -70,7 +68,6 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
                      }
                  }
              }
-         }
         getMessages()
         sendField.text = ""
      }
@@ -129,16 +126,14 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBAction func sendPressed(_ sender: Any) {
          guard let content = sendField.text,
-               let username = defaults.string(forKey: "Username"),
                let myProfileId = defaults.string(forKey: "ProfileId"),
-               let recipientId = conversation?.RecipientID,
-               let profileId = conversation?.ProfileID
+               let recipientId = recipientId
                else { return }
          
         let parametersPOST = ["content": content,
-                               "username": username]
+                              "profileId": myProfileId]
          
-        let parametersPATCH = ["profileId": profileId,
+        let parametersPATCH = ["profileId": myProfileId,
                                 "recipientId": recipientId]
         
         sendMessage(parametersPOST: parametersPOST, parametersPATCH: parametersPATCH, myProfileId: myProfileId)
@@ -162,9 +157,10 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
             messageId = messages[indexPath.row].MessageID
         }
         
-        if (messages[indexPath.row].Username != defaults.string(forKey: "Username"))
+        if (messages[indexPath.row].ProfileID != defaults.string(forKey: "ProfileId"))
         {
             cell.isIncoming = true
+            recipientId = messages[indexPath.row].ProfileID
         }
         
         return cell

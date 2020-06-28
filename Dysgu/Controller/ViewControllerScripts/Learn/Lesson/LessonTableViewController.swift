@@ -30,8 +30,7 @@ class LessonTableViewController: UITableViewController {
     }
     
     func getLessonContent(){
-        if let lessonId = lesson?.LessonID {
-            networkingService.response(endpoint: "/lessons/" + lessonId + "/content", method: "GET") { (result: Result<[Content], Error>) in
+            networkingService.response(endpoint: "/lessons/1/content", method: "GET") { (result: Result<[Content], Error>) in
                 switch result {
                     case .success(let decodedJSON):
                         self.contents = decodedJSON
@@ -39,7 +38,6 @@ class LessonTableViewController: UITableViewController {
                         print(error)
                 }
             }
-        }
     }
     
     
@@ -61,10 +59,11 @@ class LessonTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "Content") as? LessonContentViewController{
+        /*if let vc = storyboard?.instantiateViewController(withIdentifier: "Content") as? LessonContentViewController{
                 vc.content = contents[indexPath.row]
                 navigationController?.pushViewController(vc, animated: true)
-        }
+        }*/
+        performSegue(withIdentifier: "contentSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -21,7 +21,7 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func getFriendslist() {
         if let profileId = defaults.string(forKey: "ProfileId") {
-            networkingService.response(endpoint: "/friends/" + profileId, method: "GET") { (result: Result<[Friend], Error>) in
+            networkingService.response(endpoint: "/friends/list/" + profileId, method: "GET") { (result: Result<[Friend], Error>) in
                 switch result {
                     case .success(let decodedJSON):
                         self.friendsList = decodedJSON
@@ -34,7 +34,7 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func getFriendRequests() {
         if let profileId = defaults.string(forKey: "ProfileId") {
-            networkingService.response(endpoint: "/friends/" + profileId + "/requests", method: "GET") { (result: Result<[Friend], Error>) in
+            networkingService.response(endpoint: "/friends/request/" + profileId , method: "GET") { (result: Result<[Friend], Error>) in
                 switch result {
                     case .success(let decodedJSON):
                         self.friendRequest = decodedJSON
@@ -49,6 +49,12 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
            getFriendslist()
            getFriendRequests()
+           navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Search", style: .plain, target: self, action: #selector(searchfriend))
+        navigationItem.rightBarButtonItem?.image = UIImage(systemName: "plus.circle.fill")
+    }
+    
+    @objc func searchfriend() {
+       performSegue(withIdentifier: "searchFriend", sender: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {

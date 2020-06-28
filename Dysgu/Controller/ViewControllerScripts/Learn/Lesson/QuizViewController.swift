@@ -12,6 +12,7 @@ class QuizViewController: UIViewController {
 
     let alertService = AlertService()
     let networkingService = NetworkingService()
+    //let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerFire), userInfo: nil, repeats: true)
     var lesson: Lesson?
     var contents = [Content]()
     var questions = [Question]()
@@ -19,8 +20,11 @@ class QuizViewController: UIViewController {
     var currentQuestion = 0
     var rightAnswerPlacement:UInt32 = 0
     var score = 0
+    var time = 999
     
     @IBOutlet weak var questionText: UITextView!
+    @IBOutlet weak var scoreText: UILabel!
+    @IBOutlet weak var timeText: UILabel!
     
     func createQuestions() {
         for i in 0...contents.count-1 {
@@ -39,21 +43,26 @@ class QuizViewController: UIViewController {
     
     @IBAction func answerPressed(_ sender: AnyObject) {
         
-        if (sender.tag == Int(rightAnswerPlacement)) {
+        if (sender.tag == Int(rightAnswerPlacement) && currentQuestion < 6) {
             let alert = self.alertService.alert(message: "Correct")
             self.present(alert, animated: true)
             nextQuestion()
             score += 1
+            scoreText.text = "Score: \(score)"
+        }else if (currentQuestion > 5) {
+            //timer.invalidate()
+            let alert = self.alertService.alert(message: "Your score was \(score)")
+            self.present(alert, animated: true)
         }else{
             let alert = self.alertService.alert(message: "Incorrect")
             self.present(alert, animated: true)
             nextQuestion()
         }
-        
-        if (currentQuestion >= 5) {
-            let alert = self.alertService.alert(message: "Your score was \(score)")
-            self.present(alert, animated: true)
-        }
+    }
+    
+    @objc func timerFire() {
+        //time -= 1
+        //timeText.text = "Time: " + String(time)
     }
     
     func nextQuestion() {

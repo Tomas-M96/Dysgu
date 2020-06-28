@@ -33,6 +33,7 @@ class ChallengeHistoryViewController: UIViewController, UITableViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getHistorical()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -46,7 +47,11 @@ class ChallengeHistoryViewController: UIViewController, UITableViewDataSource, U
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Challenge", for: indexPath)
         let challenge = challenges[indexPath.row]
-        cell.textLabel?.text = challenge.Username
+        //cell.textLabel?.text = challenge.Username
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            performSegue(withIdentifier: "historySegue", sender: nil)
     }
 }

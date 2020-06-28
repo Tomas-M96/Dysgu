@@ -15,6 +15,7 @@ class CreateGroupViewController: UIViewController {
     let defaults = UserDefaults.standard
     
     var groupId: GroupID?
+    var number = false
     
     @IBOutlet weak var groupImage: UIImageView!
     @IBOutlet weak var nameText: UITextField!
@@ -54,12 +55,18 @@ class CreateGroupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        groupImage.image = UIImage(named: "abc.png")
+        //groupImage.image = UIImage(named: "abc.png")
         defaults.removeObject(forKey: "GroupPic")
+        if (number == true){
+            stuff()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        groupImage.image = UIImage(named: defaults.string(forKey: "GroupPic") ?? "default")
+        //groupImage.image = UIImage(named: defaults.string(forKey: "GroupPic") ?? "default")
+        if (number == true){
+            stuff()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,11 +83,23 @@ class CreateGroupViewController: UIViewController {
                               "About": aboutText.text,
                               "Image": defaults.string(forKey: "GroupPic")]
             
-            postGroup(parameters: parameters as! [String : String])
+            //postGroup(parameters: parameters as! [String : String])
+            let alert = self.alertService.alert(message: "Group Created")
+            self.present(alert, animated: true)
         } else {
             
         }
         
+    }
+    
+    @IBAction func press(_ sender: Any) {
+        number = true
+        print(number)
+    }
+
+    func stuff()
+    {
+        groupImage.image = UIImage(named: defaults.string(forKey: "GroupPic") ?? "DragonBlue.png")
     }
     
 }

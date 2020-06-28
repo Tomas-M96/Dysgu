@@ -39,6 +39,7 @@ class LearnViewController: UIViewController {
         performSegue(withIdentifier: "unitSegue", sender: self)
     }
     
+    
     func configureStackView() {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
@@ -49,8 +50,8 @@ class LearnViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:50),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-50),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:30),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-30),
             stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 50),
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
@@ -58,9 +59,9 @@ class LearnViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        getUnitList()
+        //getUnitList()
         configureNavigationBar()
-        configureStackView()
+        //configureStackView()
     }
     
     func configureNavigationBar() {

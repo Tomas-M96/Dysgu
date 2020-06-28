@@ -57,7 +57,7 @@ class LessonChallengeSelectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getLessonList()
-        configureStackView()
+        //configureStackView()
     }
     
     func getLessonList(){
@@ -74,11 +74,12 @@ class LessonChallengeSelectViewController: UIViewController {
         }
     }
     
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "lessonSegue" {
             if let vc = segue.destination as? ChallengeMethodViewController {
                 vc.lesson = lessons[lessonId-1]
             }
         }
-    }
+    }*/
 }

@@ -87,11 +87,11 @@ class PendingChallengesViewController: UIViewController, UITableViewDelegate, UI
         
         if (segmentControl.selectedSegmentIndex == 1) {
             let challenge = receivedChallenges[indexPath.row]
-            cell.textLabel?.text = challenge.Username
+            //cell.textLabel?.text = challenge.Username
             
         } else {
             let challenge = sentChallenges[indexPath.row]
-            cell.textLabel?.text = challenge.Username
+            //cell.textLabel?.text = challenge.Username
         }
         
         return cell
@@ -101,9 +101,9 @@ class PendingChallengesViewController: UIViewController, UITableViewDelegate, UI
         if (segmentControl.selectedSegmentIndex == 1) {
             if let vc = storyboard?.instantiateViewController(withIdentifier: "ChallengeQuiz") as?
                 ChallengeQuizViewController{
-                vc.lessonId = receivedChallenges[indexPath.row].LessonID
-                vc.challengeId = receivedChallenges[indexPath.row].ChallengeID
-                vc.recipientId = receivedChallenges[indexPath.row].PlayerOne
+                vc.lessonId = receivedChallenges[indexPath.row].LessonID!
+                vc.challengeId = receivedChallenges[indexPath.row].ChallengeID!
+                vc.recipientId = receivedChallenges[indexPath.row].PlayerOne!
                 navigationController?.pushViewController(vc, animated: true)
             }
         }

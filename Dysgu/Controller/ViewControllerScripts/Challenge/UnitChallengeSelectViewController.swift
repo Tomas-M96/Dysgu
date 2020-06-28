@@ -59,8 +59,8 @@ class UnitChallengeSelectViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        getUnitList()
-        configureStackView()
+        //getUnitList()
+        //configureStackView()
     }
     
     func getUnitList(){
@@ -75,6 +75,7 @@ class UnitChallengeSelectViewController: UIViewController {
         }
     }
     
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "unitSegue" {
             if let vc = segue.destination as? LessonChallengeSelectViewController {
@@ -82,4 +83,5 @@ class UnitChallengeSelectViewController: UIViewController {
             }
         }
     }
+    */
 }

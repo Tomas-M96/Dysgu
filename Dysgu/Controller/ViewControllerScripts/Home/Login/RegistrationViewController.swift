@@ -22,15 +22,17 @@ class RegistrationViewController: UIViewController {
     
     //Networking call to register the account
     func registerAccount(_ parameters: [String : String]) {
+        print(parameters)
+        
         networkingService.request(endpoint: "/users", method: "POST", parameters: parameters) { (result: Result<Response, Error>) in
             switch result {
-            case .success:
-                let alert = self.alertService.alert(message: "Account Created")
-                self.present(alert, animated: true)
-            case .failure(let error):
-                let alert = self.alertService.alert(message: error.localizedDescription)
-                self.present(alert, animated: true)
-                print(error)
+                case .success:
+                    let alert = self.alertService.alert(message: "Account Created")
+                    self.present(alert, animated: true)
+                case .failure(let error):
+                    let alert = self.alertService.alert(message: error.localizedDescription)
+                    self.present(alert, animated: true)
+                    print(error)
             }
         }
     }

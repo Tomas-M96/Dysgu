@@ -23,6 +23,7 @@ class GroupsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New", style: .plain, target: self, action: #selector(newSegue))
+        navigationItem.rightBarButtonItem?.image = UIImage(systemName: "plus.circle.fill")
         getAllGroups()
         getJoinedGroups()
     }
@@ -91,6 +92,10 @@ class GroupsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         return cell
+    }
+    
+    @IBAction func stuff(_ sender: Any) {
+        performSegue(withIdentifier: "test", sender: self)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

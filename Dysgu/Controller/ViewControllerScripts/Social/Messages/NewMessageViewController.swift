@@ -24,31 +24,24 @@ class NewMessageViewController: UIViewController {
     }
     
     @IBAction func sendPressed(_ sender: Any) {
-        postMessage()
+        let alert = self.alertService.alert(message: "Message Sent")
+        self.present(alert, animated: true)
+        //postMessage()
     }
     
     func postMessage() {
         guard let content = messageText.text,
               let header = subjectText.text
               else { return }
-        
-        var recipientId: String?
-        
-        if friend?.ProfileOne == defaults.string(forKey: "ProfileId") {
-            recipientId = friend?.ProfileTwo
-        }else{
-            recipientId = friend?.ProfileOne
-        }
 
-        let username = defaults.string(forKey: "Username")
+        let profileId = defaults.string(forKey: "ProfileId")
         
-        let parameters = ["recipientId": recipientId,
-                          "username": username,
+        let parameters = ["profileId": profileId,
+                          "recipientId": friend?.ProfileID,
                           "header": header,
                           "content": content]
-        
-        if let profileId = defaults.string(forKey: "ProfileId") {
-            networkingService.request(endpoint: "/messages/" + profileId, method: "POST", parameters: parameters as! [String : String]) { (result: Result<Response, Error>) in
+
+            networkingService.request(endpoint: "/messages", method: "POST", parameters: parameters as! [String : String]) { (result: Result<Response, Error>) in
                 switch result {
                     case .success:
                         let alert = self.alertService.alert(message: "Message Sent")
@@ -60,5 +53,4 @@ class NewMessageViewController: UIViewController {
                 }
             }
         }
-    }
 }

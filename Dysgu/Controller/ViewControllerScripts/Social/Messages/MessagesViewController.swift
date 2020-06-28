@@ -24,7 +24,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func getRecievedConversations() {
         if let profileId = defaults.string(forKey: "ProfileId") {
-            networkingService.response(endpoint: "/messages/" + profileId + "/recieved", method: "GET") { (result: Result<[Conversation], Error>) in
+            networkingService.response(endpoint: "/messages/received/" + profileId, method: "GET") { (result: Result<[Conversation], Error>) in
                 switch result {
                 case .success(let decodedJSON):
                     self.conversationsRecieved = decodedJSON
@@ -38,7 +38,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func getSentConversations() {
         if let profileId = defaults.string(forKey: "ProfileId") {
-            networkingService.response(endpoint: "/messages/" + profileId + "/sent", method: "GET") { (result: Result<[Conversation], Error>) in
+            networkingService.response(endpoint: "/messages/sent/" + profileId, method: "GET") { (result: Result<[Conversation], Error>) in
                 switch result {
                 case .success(let decodedJSON):
                     self.conversationsSent = decodedJSON
@@ -55,6 +55,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         getRecievedConversations()
         getSentConversations()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Compose", style: .plain, target: self, action: #selector(composeMessage))
+        navigationItem.rightBarButtonItem?.image = UIImage(systemName: "plus.circle.fill")
     }
     
     override func viewWillAppear(_ animated: Bool) {

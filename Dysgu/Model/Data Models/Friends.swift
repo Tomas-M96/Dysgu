@@ -9,11 +9,9 @@
 import Foundation
 
 struct Friend: Decodable {
-    let FriendshipID: String
+    let FriendshipID: String?
     let Username: String
-    let ProfileOne: String
-    let ProfileTwo: String?
-    //let Accepted: String
+    let ProfileID: String
 }
 
 

@@ -26,7 +26,7 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func getGroup() {
         if let groupId = group?.GroupID {
-            networkingService.response(endpoint: "/groups/" + groupId, method: "GET") { (result: Result<Group, Error>) in
+            networkingService.response(endpoint: "/groups/14", method: "GET") { (result: Result<Group, Error>) in
                 switch result {
                     case .success(let decodedJSON):
                         self.group = decodedJSON
@@ -66,16 +66,15 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func getGroupFeed() {
-        if let groupId = group?.GroupID {
-            networkingService.response(endpoint: "/" + groupId + "/feed", method: "GET") { (result: Result<[FeedMessage], Error>) in
+            networkingService.response(endpoint: "/14/feed", method: "GET") { (result: Result<[FeedMessage], Error>) in
                 switch result {
                     case .success(let decodedJSON):
                         self.messages = decodedJSON
+                        self.feedTable.reloadData()
                     case .failure(let error):
                         print(error)
                 }
             }
-        }
     }
 
     func viewSetup() {
@@ -88,13 +87,14 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         getGroup()
         getGroupFeed()
+        /*
         if (hasJoined) {
             actionButton.setTitle("Leave Group", for: .normal)
             actionButton.backgroundColor = .systemRed
         }else{
             actionButton.setTitle("Join Group", for: .normal)
             actionButton.backgroundColor = .systemOrange
-        }
+        }*/
         
         if (isAdmin) {
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editSegue))
@@ -104,14 +104,14 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
 
 
     override func viewDidAppear(_ animated: Bool) {
-        self.aboutText.text = group?.About
-        feedTable.reloadData()
+        //self.aboutText.text = group?.About
+        //feedTable.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         getGroup()
         getGroupFeed()
-        feedTable.reloadData()
+        //feedTable.reloadData()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -123,22 +123,27 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     @objc func editSegue() {
+        /*
         if let vc = storyboard?.instantiateViewController(withIdentifier: "GroupAdmin") as? GroupAdminViewController{
             vc.group = group
             navigationController?.pushViewController(vc, animated: true)
-        }
+        }*/
+        performSegue(withIdentifier: "stuffnow", sender: self)
     }
     
     @IBAction func actionPressed(_ sender: Any) {
-        actionGroup()
+        //actionGroup()
+        let alert = self.alertService.alert(message: "Group Joined")
+        self.present(alert, animated: true)
     }
+    
         
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Message", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "News", for: indexPath)
         let message = messages[indexPath.row]
         cell.textLabel?.text = message.Username
         cell.detailTextLabel?.text = message.Content

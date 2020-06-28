@@ -9,16 +9,16 @@
 import Foundation
 
 struct Challenge: Decodable {
-    let ChallengeID: String
-    let LessonID: String
-    let PlayerOne: String
-    let PlayerTwo: String
-    let Topic: String
+    let ChallengeID: String?
+    let LessonID: String?
+    let PlayerOne: String?
+    let PlayerTwo: String?
+    let topic: String
     let Username: String
     let ScoreOne: String?
     let ScoreTwo: String?
     let Winner: String?
-    let DateCreated: String
+    let DateCreated: String?
 }
 
 struct LastID: Decodable {

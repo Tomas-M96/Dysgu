@@ -14,13 +14,9 @@ class ChallengeViewController: UIViewController {
     let networkingService = NetworkingService()
     let defaults = UserDefaults.standard
     
-    @IBOutlet weak var usernameText: UILabel!
-    
-    
     override func viewDidLoad(){
         super.viewDidLoad()
         configureNavigationBar()
-        usernameText.text = defaults.string(forKey: "Username")
     }
     
     func configureNavigationBar() {

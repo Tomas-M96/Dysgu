@@ -11,7 +11,7 @@ import Foundation
 struct FeedMessage: Decodable {
     //let FeedMessageID: String
     let GroupFeedID: String
-    //let ProfileID: String
+    //let ProfileID: String?
     let Content: String
     let DatePosted: String
     let Username: String

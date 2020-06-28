@@ -21,7 +21,7 @@ class FeedMessageViewController: UIViewController {
     func postMessage(parameters: [String:String]) {
         if let groupFeedId = defaults.string(forKey: "FeedId"), let profileId = defaults.string(forKey: "ProfileId") {
             if(feedText.text != ""){
-                networkingService.request(endpoint: "/feed/" + groupFeedId + "/" + profileId, method: "POST", parameters: parameters) { (result: Result<Response, Error>) in
+                networkingService.request(endpoint: "/feed/3/" + profileId, method: "POST", parameters: parameters) { (result: Result<Response, Error>) in
                     switch result {
                     case .success:
                         let alert = self.alertService.alert(message: "Message Sent")
@@ -43,6 +43,20 @@ class FeedMessageViewController: UIViewController {
         }
     }
     
+    func getGroupFeed() {
+        if let groupId = group?.GroupID {
+            networkingService.response(endpoint: "/14/feed", method: "GET") { (result: Result<[FeedMessage], Error>) in
+                switch result {
+                    case .success(let decodedJSON):
+                        //self.messages = decodedJSON
+                    print("a")
+                    case .failure(let error):
+                        print(error)
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -54,6 +68,9 @@ class FeedMessageViewController: UIViewController {
     @IBAction func sendPressed(_ sender: Any) {
         let parameters = ["Content": feedText.text]
         
-        postMessage(parameters: parameters as! [String : String])
+        let alert = self.alertService.alert(message: "Message Sent")
+        self.present(alert, animated: true)
+        
+        //postMessage(parameters: parameters as! [String : String])
     }
 }

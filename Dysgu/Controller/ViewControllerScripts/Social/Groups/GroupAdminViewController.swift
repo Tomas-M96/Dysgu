@@ -61,8 +61,8 @@ class GroupAdminViewController: UIViewController {
     }
     
     func viewSetup() {
-        aboutText.text = self.group?.About
-        groupImage.image = UIImage(named: group?.Image ?? "dragon2.png")
+        //aboutText.text = self.group?.About
+        //groupImage.image = UIImage(named: group?.Image ?? "dragon2.png")
     }
     
     override func viewDidLoad() {
@@ -84,7 +84,8 @@ class GroupAdminViewController: UIViewController {
     
     @IBAction func savePressed(_ sender: Any) {
         let parameters = ["About": aboutText.text]
-        
-        patchGroup(parameters: parameters as! [String : String])
+        let alert = self.alertService.alert(message: "Group Updated")
+        self.present(alert, animated: true)
+        //patchGroup(parameters: parameters as! [String : String])
     }
 }

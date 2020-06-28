@@ -41,16 +41,17 @@ class ComposeViewController: UIViewController, UITableViewDataSource, UITableVie
     }
        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "NewMessage") as?
+        /*if let vc = storyboard?.instantiateViewController(withIdentifier: "NewMessage") as?
             NewMessageViewController{
                 vc.friend = friendsList[indexPath.row]
                 navigationController?.pushViewController(vc, animated: true)
-        }
+        }*/
+        performSegue(withIdentifier: "composeSegue", sender: self)
     }
        
     func getFriendslist() {
         if let profileId = defaults.string(forKey: "ProfileId") {
-            networkingService.response(endpoint: "/friends/" + profileId, method: "GET") { (result: Result<[Friend], Error>) in
+            networkingService.response(endpoint: "/friends/list/" + profileId, method: "GET") { (result: Result<[Friend], Error>) in
                 switch result {
                     case .success(let decodedJSON):
                         self.friendsList = decodedJSON

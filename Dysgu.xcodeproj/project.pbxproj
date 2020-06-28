@@ -27,7 +27,21 @@
 		B44102F823D8E44B0095F910 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B44102F723D8E44B0095F910 /* Messages.storyboard */; };
 		B4413EAD23BE71F200951812 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4413EAC23BE71F200951812 /* NetworkingService.swift */; };
 		B445BFF623E4C5270087D87E /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = B445BFF523E4C5270087D87E /* Quiz.swift */; };
+		B44AEC19246C666E00625A8D /* BadgeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B44AEC18246C666E00625A8D /* BadgeImage.png */; };
+		B44AEC1B246C688200625A8D /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AEC1A246C688200625A8D /* ChangePasswordViewController.swift */; };
+		B44AEC1D246C689300625A8D /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44AEC1C246C689300625A8D /* ChangeEmailViewController.swift */; };
+		B44AEC1F246C7DE100625A8D /* DragonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = B44AEC1E246C7DE100625A8D /* DragonBlue.png */; };
+		B44AEC22246C8D4E00625A8D /* Lesson.png in Resources */ = {isa = PBXBuildFile; fileRef = B44AEC20246C8D4E00625A8D /* Lesson.png */; };
+		B44AEC23246C8D4E00625A8D /* Unit.png in Resources */ = {isa = PBXBuildFile; fileRef = B44AEC21246C8D4E00625A8D /* Unit.png */; };
+		B44AEC26246CA13300625A8D /* Friend.png in Resources */ = {isa = PBXBuildFile; fileRef = B44AEC24246CA13200625A8D /* Friend.png */; };
+		B44AEC27246CA13300625A8D /* Stranger.png in Resources */ = {isa = PBXBuildFile; fileRef = B44AEC25246CA13200625A8D /* Stranger.png */; };
+		B44AEC29246CA98900625A8D /* DragonWales.png in Resources */ = {isa = PBXBuildFile; fileRef = B44AEC28246CA98900625A8D /* DragonWales.png */; };
+		B44B3C09244F4C6A004D5EEC /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44B3C08244F4C6A004D5EEC /* News.swift */; };
 		B44F582723CBCA52007935D2 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B44F582623CBCA52007935D2 /* Profile.storyboard */; };
+		B450E7D42469C41500479F5F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B450E7D32469C41500479F5F /* Default.png */; };
+		B450E7D62469E41200479F5F /* badges.png in Resources */ = {isa = PBXBuildFile; fileRef = B450E7D52469E41200479F5F /* badges.png */; };
+		B450E7D8246A0A6000479F5F /* BadgeDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = B450E7D7246A0A6000479F5F /* BadgeDetail.png */; };
+		B450E7DC246A262A00479F5F /* b.png in Resources */ = {isa = PBXBuildFile; fileRef = B450E7DB246A262A00479F5F /* b.png */; };
 		B45220F923CF9981006F247D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45220F823CF9981006F247D /* TabBarController.swift */; };
 		B45220FB23CF9B11006F247D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45220FA23CF9B11006F247D /* Profile.swift */; };
 		B452592423CA560200B9E63C /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B452592323CA560200B9E63C /* Social.storyboard */; };
@@ -36,6 +50,15 @@
 		B452592A23CA61F300B9E63C /* Challenge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B452592923CA61F300B9E63C /* Challenge.storyboard */; };
 		B455470723D9D14700A5C482 /* SearchFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455470623D9D14700A5C482 /* SearchFriendViewController.swift */; };
 		B455470923D9D16600A5C482 /* FriendProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455470823D9D16600A5C482 /* FriendProfileViewController.swift */; };
+		B4565D42246D23DB00CE158D /* GroupUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4565D41246D23DB00CE158D /* GroupUpdateViewController.swift */; };
+		B4565D44246D55FB00CE158D /* GroupPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4565D43246D55FB00CE158D /* GroupPictureViewController.swift */; };
+		B4565D48246D636B00CE158D /* GroupFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4565D47246D636B00CE158D /* GroupFeedTableViewController.swift */; };
+		B457DFA4246AC0FF009F954B /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = B457DFA3246AC0FF009F954B /* profile.png */; };
+		B457DFA8246AC23A009F954B /* messages.png in Resources */ = {isa = PBXBuildFile; fileRef = B457DFA5246AC23A009F954B /* messages.png */; };
+		B457DFA9246AC23A009F954B /* groups.png in Resources */ = {isa = PBXBuildFile; fileRef = B457DFA6246AC23A009F954B /* groups.png */; };
+		B457DFAA246AC23A009F954B /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = B457DFA7246AC23A009F954B /* friends.png */; };
+		B457DFAD246AC35E009F954B /* challenges.png in Resources */ = {isa = PBXBuildFile; fileRef = B457DFAB246AC35E009F954B /* challenges.png */; };
+		B457DFAE246AC35E009F954B /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = B457DFAC246AC35E009F954B /* history.png */; };
 		B459A6E023E460F9009F9C9C /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459A6DF23E460F9009F9C9C /* Unit.swift */; };
 		B45D49F123E7904300EDC5CE /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D49F023E7904300EDC5CE /* GroupsViewController.swift */; };
 		B45D49F523E79D3800EDC5CE /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D49F423E79D3800EDC5CE /* Group.swift */; };
@@ -46,9 +69,7 @@
 		B467BF1D23E0E34000C55FCD /* LessonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B467BF1C23E0E34000C55FCD /* LessonButton.swift */; };
 		B472A9C623EF73660000AC20 /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9BB23EF73640000AC20 /* abc.png */; };
 		B472A9C723EF73660000AC20 /* DysguLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9BC23EF73640000AC20 /* DysguLogo.png */; };
-		B472A9C823EF73660000AC20 /* Dragon3.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9BD23EF73650000AC20 /* Dragon3.png */; };
 		B472A9C923EF73660000AC20 /* numbers.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9BE23EF73650000AC20 /* numbers.png */; };
-		B472A9CA23EF73660000AC20 /* Dragon1.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9BF23EF73650000AC20 /* Dragon1.png */; };
 		B472A9CB23EF73660000AC20 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9C023EF73660000AC20 /* book.png */; };
 		B472A9CC23EF73660000AC20 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9C123EF73660000AC20 /* chat.png */; };
 		B472A9CE23EF73660000AC20 /* Pic3.png in Resources */ = {isa = PBXBuildFile; fileRef = B472A9C323EF73660000AC20 /* Pic3.png */; };
@@ -116,7 +137,21 @@
 		B44102F723D8E44B0095F910 /* Messages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
 		B4413EAC23BE71F200951812 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		B445BFF523E4C5270087D87E /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		B44AEC18246C666E00625A8D /* BadgeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BadgeImage.png; path = ../../../../Onedrive/Lluniau/BadgeImage.png; sourceTree = "<group>"; };
+		B44AEC1A246C688200625A8D /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		B44AEC1C246C689300625A8D /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
+		B44AEC1E246C7DE100625A8D /* DragonBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DragonBlue.png; path = ../../../../../Desktop/DragonBlue.png; sourceTree = "<group>"; };
+		B44AEC20246C8D4E00625A8D /* Lesson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Lesson.png; path = ../../../../../Desktop/Lesson.png; sourceTree = "<group>"; };
+		B44AEC21246C8D4E00625A8D /* Unit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Unit.png; path = ../../../../../Desktop/Unit.png; sourceTree = "<group>"; };
+		B44AEC24246CA13200625A8D /* Friend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Friend.png; path = ../../../../../Desktop/Friend.png; sourceTree = "<group>"; };
+		B44AEC25246CA13200625A8D /* Stranger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stranger.png; path = ../../../../../Desktop/Stranger.png; sourceTree = "<group>"; };
+		B44AEC28246CA98900625A8D /* DragonWales.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DragonWales.png; path = ../../../../../Desktop/DragonWales.png; sourceTree = "<group>"; };
+		B44B3C08244F4C6A004D5EEC /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		B44F582623CBCA52007935D2 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		B450E7D32469C41500479F5F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../../../Desktop/Default.png; sourceTree = "<group>"; };
+		B450E7D52469E41200479F5F /* badges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = badges.png; path = ../../../../../Desktop/badges.png; sourceTree = "<group>"; };
+		B450E7D7246A0A6000479F5F /* BadgeDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BadgeDetail.png; path = ../../../../../Desktop/BadgeDetail.png; sourceTree = "<group>"; };
+		B450E7DB246A262A00479F5F /* b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = b.png; path = ../../../../../Desktop/b.png; sourceTree = "<group>"; };
 		B45220F823CF9981006F247D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B45220FA23CF9B11006F247D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		B452592323CA560200B9E63C /* Social.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Social.storyboard; sourceTree = "<group>"; };
@@ -125,6 +160,15 @@
 		B452592923CA61F300B9E63C /* Challenge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Challenge.storyboard; sourceTree = "<group>"; };
 		B455470623D9D14700A5C482 /* SearchFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendViewController.swift; sourceTree = "<group>"; };
 		B455470823D9D16600A5C482 /* FriendProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileViewController.swift; sourceTree = "<group>"; };
+		B4565D41246D23DB00CE158D /* GroupUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupUpdateViewController.swift; sourceTree = "<group>"; };
+		B4565D43246D55FB00CE158D /* GroupPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPictureViewController.swift; sourceTree = "<group>"; };
+		B4565D47246D636B00CE158D /* GroupFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedTableViewController.swift; sourceTree = "<group>"; };
+		B457DFA3246AC0FF009F954B /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile.png; path = ../../../../../Desktop/profile.png; sourceTree = "<group>"; };
+		B457DFA5246AC23A009F954B /* messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = messages.png; path = ../../../../../Desktop/messages.png; sourceTree = "<group>"; };
+		B457DFA6246AC23A009F954B /* groups.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = groups.png; path = ../../../../../Desktop/groups.png; sourceTree = "<group>"; };
+		B457DFA7246AC23A009F954B /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = friends.png; path = ../../../../../Desktop/friends.png; sourceTree = "<group>"; };
+		B457DFAB246AC35E009F954B /* challenges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = challenges.png; path = ../../../../../Desktop/challenges.png; sourceTree = "<group>"; };
+		B457DFAC246AC35E009F954B /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = history.png; path = ../../../../../Desktop/history.png; sourceTree = "<group>"; };
 		B459A6DF23E460F9009F9C9C /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		B45D49F023E7904300EDC5CE /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		B45D49F423E79D3800EDC5CE /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
@@ -135,9 +179,7 @@
 		B467BF1C23E0E34000C55FCD /* LessonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonButton.swift; sourceTree = "<group>"; };
 		B472A9BB23EF73640000AC20 /* abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc.png; sourceTree = "<group>"; };
 		B472A9BC23EF73640000AC20 /* DysguLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DysguLogo.png; sourceTree = "<group>"; };
-		B472A9BD23EF73650000AC20 /* Dragon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dragon3.png; sourceTree = "<group>"; };
 		B472A9BE23EF73650000AC20 /* numbers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numbers.png; sourceTree = "<group>"; };
-		B472A9BF23EF73650000AC20 /* Dragon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dragon1.png; sourceTree = "<group>"; };
 		B472A9C023EF73660000AC20 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
 		B472A9C123EF73660000AC20 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
 		B472A9C323EF73660000AC20 /* Pic3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pic3.png; sourceTree = "<group>"; };
@@ -277,6 +319,7 @@
 			children = (
 				B452592323CA560200B9E63C /* Social.storyboard */,
 				B44102F523D8E43E0095F910 /* Groups.storyboard */,
+				B4565D41246D23DB00CE158D /* GroupUpdateViewController.swift */,
 				B44102F723D8E44B0095F910 /* Messages.storyboard */,
 				B44102F323D8E3830095F910 /* Friends.storyboard */,
 			);
@@ -393,6 +436,7 @@
 				B4888C0D23BEA36E002AC424 /* User.swift */,
 				B4EDD11223DDBF8800FD4EF0 /* Messages.swift */,
 				B45D49F423E79D3800EDC5CE /* Group.swift */,
+				B44B3C08244F4C6A004D5EEC /* News.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -400,7 +444,9 @@
 		B45D49EF23E7902C00EDC5CE /* Groups */ = {
 			isa = PBXGroup;
 			children = (
+				B4565D47246D636B00CE158D /* GroupFeedTableViewController.swift */,
 				B440038B23FC7AA000D425E4 /* CreateGroupViewController.swift */,
+				B4565D43246D55FB00CE158D /* GroupPictureViewController.swift */,
 				B4BAE3E623F8C93D00161EC0 /* FeedMessageViewController.swift */,
 				B422250B23F8A058009AE2BA /* GroupPictureCollectionViewController.swift */,
 				B422250923F8A03E009AE2BA /* GroupAdminViewController.swift */,
@@ -462,14 +508,29 @@
 		B4BB0EE723E3A6AC002D619F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B450E7D32469C41500479F5F /* Default.png */,
 				B472A9BB23EF73640000AC20 /* abc.png */,
+				B457DFA3246AC0FF009F954B /* profile.png */,
 				B472A9C023EF73660000AC20 /* book.png */,
+				B450E7DB246A262A00479F5F /* b.png */,
+				B457DFAB246AC35E009F954B /* challenges.png */,
+				B457DFAC246AC35E009F954B /* history.png */,
+				B450E7D7246A0A6000479F5F /* BadgeDetail.png */,
 				B472A9C123EF73660000AC20 /* chat.png */,
-				B472A9BF23EF73650000AC20 /* Dragon1.png */,
-				B472A9BD23EF73650000AC20 /* Dragon3.png */,
+				B44AEC1E246C7DE100625A8D /* DragonBlue.png */,
 				B472A9BC23EF73640000AC20 /* DysguLogo.png */,
+				B457DFA7246AC23A009F954B /* friends.png */,
+				B457DFA6246AC23A009F954B /* groups.png */,
+				B44AEC24246CA13200625A8D /* Friend.png */,
+				B44AEC25246CA13200625A8D /* Stranger.png */,
+				B44AEC20246C8D4E00625A8D /* Lesson.png */,
+				B44AEC21246C8D4E00625A8D /* Unit.png */,
+				B457DFA5246AC23A009F954B /* messages.png */,
 				B472A9BE23EF73650000AC20 /* numbers.png */,
+				B44AEC18246C666E00625A8D /* BadgeImage.png */,
+				B450E7D52469E41200479F5F /* badges.png */,
 				B463FFC423F6E21F00748124 /* locked.png */,
+				B44AEC28246CA98900625A8D /* DragonWales.png */,
 				B472A9C323EF73660000AC20 /* Pic3.png */,
 				B472A9C423EF73660000AC20 /* Pic4.png */,
 				B472A9C523EF73660000AC20 /* Pic5.png */,
@@ -487,6 +548,8 @@
 		B4E6960123CE51B300B15D27 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				B44AEC1A246C688200625A8D /* ChangePasswordViewController.swift */,
+				B44AEC1C246C689300625A8D /* ChangeEmailViewController.swift */,
 				B4A8502223E227DD00E37828 /* SettingsViewController.swift */,
 			);
 			path = Settings;
@@ -583,16 +646,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B472A9C823EF73660000AC20 /* Dragon3.png in Resources */,
 				B41160A8239148EF007D8B42 /* LaunchScreen.storyboard in Resources */,
 				B452592823CA61E500B9E63C /* Learn.storyboard in Resources */,
 				B472A9CF23EF73660000AC20 /* Pic4.png in Resources */,
 				B44F582723CBCA52007935D2 /* Profile.storyboard in Resources */,
+				B44AEC19246C666E00625A8D /* BadgeImage.png in Resources */,
+				B44AEC23246C8D4E00625A8D /* Unit.png in Resources */,
 				B472A9C623EF73660000AC20 /* abc.png in Resources */,
+				B450E7DC246A262A00479F5F /* b.png in Resources */,
 				B452592623CA61D400B9E63C /* Home.storyboard in Resources */,
+				B457DFA8246AC23A009F954B /* messages.png in Resources */,
+				B450E7D42469C41500479F5F /* Default.png in Resources */,
+				B457DFAA246AC23A009F954B /* friends.png in Resources */,
 				B472A9CB23EF73660000AC20 /* book.png in Resources */,
 				B41160A5239148EF007D8B42 /* Assets.xcassets in Resources */,
+				B44AEC22246C8D4E00625A8D /* Lesson.png in Resources */,
+				B457DFA9246AC23A009F954B /* groups.png in Resources */,
 				B41CF93B23E212CC005388B4 /* Lesson.storyboard in Resources */,
+				B457DFAE246AC35E009F954B /* history.png in Resources */,
 				B472A9CE23EF73660000AC20 /* Pic3.png in Resources */,
 				B41160A3239148EE007D8B42 /* Main.storyboard in Resources */,
 				B44102F823D8E44B0095F910 /* Messages.storyboard in Resources */,
@@ -602,12 +673,19 @@
 				B4E695FE23CE50C300B15D27 /* Settings.storyboard in Resources */,
 				B472A9D023EF73660000AC20 /* Pic5.png in Resources */,
 				B472A9C923EF73660000AC20 /* numbers.png in Resources */,
+				B44AEC27246CA13300625A8D /* Stranger.png in Resources */,
+				B450E7D8246A0A6000479F5F /* BadgeDetail.png in Resources */,
+				B457DFA4246AC0FF009F954B /* profile.png in Resources */,
 				B472A9C723EF73660000AC20 /* DysguLogo.png in Resources */,
 				B472A9CC23EF73660000AC20 /* chat.png in Resources */,
-				B472A9CA23EF73660000AC20 /* Dragon1.png in Resources */,
+				B44AEC1F246C7DE100625A8D /* DragonBlue.png in Resources */,
+				B44AEC29246CA98900625A8D /* DragonWales.png in Resources */,
 				B452592423CA560200B9E63C /* Social.storyboard in Resources */,
+				B44AEC26246CA13300625A8D /* Friend.png in Resources */,
+				B457DFAD246AC35E009F954B /* challenges.png in Resources */,
 				B463FFC523F6E21F00748124 /* locked.png in Resources */,
 				B452592A23CA61F300B9E63C /* Challenge.storyboard in Resources */,
+				B450E7D62469E41200479F5F /* badges.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +702,7 @@
 				B4A8502523E2289300E37828 /* HomeViewController.swift in Sources */,
 				B411609C239148EE007D8B42 /* AppDelegate.swift in Sources */,
 				B4EDD11123DDB40E00FD4EF0 /* MessagesViewController.swift in Sources */,
+				B4565D44246D55FB00CE158D /* GroupPictureViewController.swift in Sources */,
 				B4E881D623EF524B00D95FF5 /* ImageCollectionViewCell.swift in Sources */,
 				B45D49F523E79D3800EDC5CE /* Group.swift in Sources */,
 				B440038C23FC7AA000D425E4 /* CreateGroupViewController.swift in Sources */,
@@ -636,6 +715,7 @@
 				B42B581323F49C8800A29F89 /* BadgeCollectionViewController.swift in Sources */,
 				B422250A23F8A03E009AE2BA /* GroupAdminViewController.swift in Sources */,
 				B4D9C58423EACD1900EEEA88 /* GroupProfileViewController.swift in Sources */,
+				B44B3C09244F4C6A004D5EEC /* News.swift in Sources */,
 				B43C20AA23D50BB600A4FA9D /* Friends.swift in Sources */,
 				B473073E23D7ACF400B31D0F /* FriendsViewController.swift in Sources */,
 				B4F031EE23EC721700E9FE8C /* PendingChallengesViewController.swift in Sources */,
@@ -644,11 +724,14 @@
 				B4F2E8CE23DA74400011CD5E /* FriendAddViewController.swift in Sources */,
 				B4A1D2FC23F337A2001F0150 /* MessageChatCell.swift in Sources */,
 				B4EDD11323DDBF8800FD4EF0 /* Messages.swift in Sources */,
+				B4565D42246D23DB00CE158D /* GroupUpdateViewController.swift in Sources */,
 				B41CF94B23E21F06005388B4 /* LessonTableViewController.swift in Sources */,
 				B4A023E323E63F92001DF731 /* NewMessageViewController.swift in Sources */,
 				B4ED152B23EDA20A00A65990 /* FriendChallengeTableViewController.swift in Sources */,
+				B44AEC1B246C688200625A8D /* ChangePasswordViewController.swift in Sources */,
 				B41CF94D23E21F4B005388B4 /* LessonContentViewController.swift in Sources */,
 				B46196F023EF251D00C13464 /* InitialViewController.swift in Sources */,
+				B44AEC1D246C689300625A8D /* ChangeEmailViewController.swift in Sources */,
 				B41CF94923E21EC3005388B4 /* LessonSelectViewController.swift in Sources */,
 				B4773E0F23C66D8100EC3026 /* RegistrationViewController.swift in Sources */,
 				B4773E0B23C6627900EC3026 /* AlertService.swift in Sources */,
@@ -669,6 +752,7 @@
 				B4888C1023BEA8D6002AC424 /* ErrorResponse.swift in Sources */,
 				B4E695F423CE484F00B15D27 /* ProfileViewController.swift in Sources */,
 				B4E881D423EF4C7D00D95FF5 /* ProfilePictureCollectionViewController.swift in Sources */,
+				B4565D48246D636B00CE158D /* GroupFeedTableViewController.swift in Sources */,
 				B4888C0E23BEA36E002AC424 /* User.swift in Sources */,
 				B4E695FA23CE4A3400B15D27 /* ChallengeViewController.swift in Sources */,
 				B4ED152723ED9DA300A65990 /* LessonChallengeSelectViewController.swift in Sources */,

@@ -20,9 +20,9 @@ class FriendAcceptViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     
     func patchFriend() {
-        
+        print(friend)
         if let friendshipId = friend?.FriendshipID {
-            networkingService.response(endpoint: "/friends/" + friendshipId, method: "PATCH") { (result: Result<Response, Error>) in
+            networkingService.response(endpoint: "/friends/request/" + friendshipId, method: "PATCH") { (result: Result<Response, Error>) in
                 switch result {
                 case .success(_):
                     self.navigationController?.popViewController(animated: true)
